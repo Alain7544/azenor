@@ -170,15 +170,46 @@
 <style>.nav-lang{display:flex;align-items:center;gap:.45rem;white-space:nowrap}
 .nav-lang a{text-decoration:none;font-size:1.1rem}
 .nav-lang span{opacity:.65}
-</style></head>
+</style>
+<style>
+/* === INDEX EN: title moved above text + iPhone-friendly fixed footer === */
+.hero-title{
+  margin: 0 0 1rem 0;
+  font-family: 'Libre Baskerville', serif;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 1.15;
+  color: #f28c28;
+  text-align: left;
+}
+@media (max-width: 768px){
+  .hero-title{ font-size: 1.7rem; text-align:center; }
+}
+
+/* Make page scrollable with a fixed footer */
+:root{ --footer-h: 110px; }
+@media (max-width: 768px){ :root{ --footer-h: 130px; } }
+
+body{
+  padding-bottom: var(--footer-h);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.site-footer{
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+}
+</style>
+</head>
 <body>
 <!-- INTRO THÉÂTRALE -->
 <!-- CONTENU DE L’INDEX -->
 <header class="site-header">
-<nav class="nav">
-<div class="nav-title">
-<a href="../index.html">The Testament of Azénor</a>
-</div><div aria-label="Language switch" class="nav-lang"><a href="../index.html" title="Version française" lang="fr" hreflang="fr">🇫🇷</a><span> | </span><a href="index.html" title="English version">🇬🇧</a></div>
+<nav class="nav"><div aria-label="Language switch" class="nav-lang"><a href="../index.html" title="Version française" lang="fr" hreflang="fr">🇫🇷</a><span> | </span><a href="index.html" title="English version">🇬🇧</a></div>
 <div class="nav-menu"><a href="index.html">home</a><a href="personnages.html">characters</a><a href="making-off.html">making off</a><a href="rights.html">rights &amp; translation</a><a href="contact.html">contact</a></div>
 </nav>
 </header>
@@ -188,6 +219,7 @@
 <img alt="Couverture du livre Le Testament d’Azénor" src="../images/accueil/couverture.jpg"/>
 </div>
 <div class="hero-text">
+<h1 class="hero-title">The Testament of Azénor</h1>
 <p>From Brest to the island of Ouessant, from the Aran Islands to the wild shores of Bréhat, this novel plunges into the remarkable legend of Azénor and her son Budoc—at the crossroads of history and mystery.</p>
 <p>Accused of adultery, the young princess Azénor is condemned to drift on the ocean. Her son Budoc is born among the Aran Islands and grows up under the protection of Saint Enda, in a monastic school where the great minds of the age are shaped.</p>
 <p>At the heart of this fresco lies a manuscript written by Tadhgán the Irishman, a former druid who became a monk—an unsettling text, capable of overturning certainties and stirring dangerous ambitions.</p>
