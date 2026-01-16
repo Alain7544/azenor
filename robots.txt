@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://alain7544.neocities.org/sitemap.xml

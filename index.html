@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+<meta charset="utf-8"/>
+<title>Le Testament d’Azénor | Site officiel</title>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="Site officiel du roman Le Testament d’Azénor : univers, personnages, lieux, making-of et informations de publication." name="description"/>
+<link href="https://alain7544.neocities.org/" rel="canonical"/>
+<link href="https://alain7544.neocities.org/" hreflang="fr" rel="alternate"/>
+<link href="https://alain7544.neocities.org/en/" hreflang="en" rel="alternate"/>
+<link href="https://alain7544.neocities.org/" hreflang="x-default" rel="alternate"/>
+<meta content="fr_FR" property="og:locale"/>
+<meta content="website" property="og:type"/>
+<meta content="Le Testament d’Azénor | Site officiel" property="og:title"/>
+<meta content="Site officiel du roman Le Testament d’Azénor : univers, personnages, lieux, making-of et informations de publication." property="og:description"/>
+<meta content="https://alain7544.neocities.org/" property="og:url"/>
+<meta content="Le Testament d’Azénor" property="og:site_name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="Le Testament d’Azénor | Site officiel" name="twitter:title"/>
+<meta content="Site officiel du roman Le Testament d’Azénor : univers, personnages, lieux, making-of et informations de publication." name="twitter:description"/>
+<style>
+    :root{
+      --accent:#f28c28;
+      --fg:#f2f2f2;
+      --muted:#cccccc;
+      --card: rgba(0,0,0,.52);
+      --border: rgba(255,255,255,.12);
+    }
+    *{ box-sizing:border-box; }
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      color:var(--fg);
+      background:
+        linear-gradient(rgba(0,0,0,.35), rgba(0,0,0,.55)),
+        url("images/accueil/fond-accueil.jpg") center / cover no-repeat fixed;
+    }
+    a{ color:inherit; text-decoration:none; }
+
+    header{
+      position:sticky;
+      top:0;
+      z-index:10;
+      background:rgba(0,0,0,.65);
+      backdrop-filter: blur(6px);
+      border-bottom:1px solid rgba(255,255,255,.1);
+    }
+    .nav{
+      max-width:1200px;
+      margin:auto;
+      padding:14px 18px;
+      display:flex;
+      align-items:center;
+      gap:16px;
+      flex-wrap:wrap;
+    }
+    .title a{
+      font-weight:700;
+      color:var(--accent);
+      white-space:nowrap;
+    }
+    .menu{
+      flex:1;
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+    .menu a{
+      color:var(--accent);
+      padding:6px 10px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.15);
+      background:rgba(0,0,0,.25);
+    }
+    .menu a:hover{ border-color:var(--accent); }
+    .lang{ display:flex; gap:8px; }
+    .lang a{
+      width:34px;
+      height:24px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      border-radius:6px;
+      border:1px solid rgba(255,255,255,.25);
+      background:rgba(0,0,0,.25);
+    }
+
+    main{
+      max-width:1200px;
+      margin:auto;
+      padding:36px 18px 44px;
+    }
+    .hero{
+      display:grid;
+      grid-template-columns: 480px 1fr;
+      gap:32px;
+      align-items:start;
+    }
+    @media(max-width:980px){ .hero{ grid-template-columns:1fr; } }
+
+    .card{
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:14px;
+      padding:18px;
+      box-shadow:0 12px 30px rgba(0,0,0,.35);
+    }
+    .cover{
+      width:100%;
+      max-width:480px;
+      display:block;
+      margin:auto;
+      border-radius:12px;
+      box-shadow:0 16px 46px rgba(0,0,0,.60);
+    }
+    h1{
+      margin:0 0 12px;
+      color:var(--accent);
+      font-size: clamp(1.6rem, 2.2vw, 2.1rem);
+    }
+    .intro{
+      line-height:1.75;
+      color:var(--muted);
+      font-size: 1.02rem;
+      white-space: pre-wrap;
+    }
+    .actions{
+      margin-top:18px;
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+    }
+    .btn{
+      padding:10px 16px;
+      border-radius:999px;
+      border:1px solid var(--accent);
+      background:rgba(242,140,40,.15);
+      font-weight:600;
+    }
+    .btn:hover{ background:rgba(242,140,40,.22); }
+    footer{
+      text-align:center;
+      padding:18px 18px 36px;
+      color:rgba(255,255,255,.55);
+    }
+  
+
+
+/* ===== Mobile: menu horizontal scrollable (iPhone) ===== */
+@media (max-width: 768px){
+  header .nav{
+    align-items: center;
+  }
+  header .nav nav.menu{
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+    gap: 8px;
+  }
+  header .nav nav.menu a{
+    flex: 0 0 auto;
+    white-space: nowrap;
+  }
+}
+</style>
+<style>
+/* Remove rounded corners on cover image */
+.cover, .cover img, img.cover {
+  border-radius: 0 !important;
+}
+
+/* Improve menu button visibility */
+.menu a{
+  background: rgba(200,200,200,0.15);
+  padding: 0.35em 0.8em;
+  border-radius: 4px;
+}
+.menu a:hover{
+  background: rgba(200,200,200,0.25);
+}
+</style>
+<style>
+/* Micro-shadow on cover */
+.cover{
+  box-shadow: 0 10px 28px rgba(0,0,0,.45) !important;
+}
+
+/* Active menu button (current page) */
+.menu a[aria-current="page"], .menu a.active{
+  background: rgba(242,140,40,0.22) !important;
+  border-color: rgba(242,140,40,0.9) !important;
+  color: var(--accent) !important;
+}
+
+/* Optional: slightly stronger hover, but keep active distinct */
+.menu a:hover{
+  background: rgba(200,200,200,0.28) !important;
+}
+</style>
+<style>
+/* === FOOTER (copié depuis une page courante) === */
+
+/* ===== FOOTER AMÉLIORÉ ===== */
+.site-footer{
+  background:#000;
+  margin-top:4rem;
+  padding:1.5rem 0;
+}
+
+.site-footer .footer-inner{
+  max-width:1200px;
+  margin:0 auto;
+  padding:0 1.5rem;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.footer-left{
+  display:flex;
+  align-items:center;
+  gap:1rem;
+}
+
+.like-btn{
+  background:none;
+  border:1px solid #f28c28;
+  color:#f28c28;
+  padding:0.4rem 0.8rem;
+  cursor:pointer;
+}
+
+.social-icons a{
+  color:#f28c28;
+  font-size:1.1rem;
+  text-decoration:none;
+  margin-right:0.6rem;
+}
+
+.footer-right .buy-btn{
+  background:#f28c28;
+  color:#000;
+  padding:0.6rem 1.2rem;
+  text-decoration:none;
+  font-weight:500;
+}
+
+
+
+/* ===== FOOTER AMÉLIORÉ v2 ===== */
+.site-footer{
+  background:#000;
+  margin-top:4rem;
+  padding:1.6rem 0;
+}
+
+.site-footer .footer-inner{
+  max-width:1200px;
+  margin:0 auto;
+  padding:0 1.5rem;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.footer-left{
+  display:flex;
+  align-items:center;
+  gap:1.2rem;
+}
+
+.like-btn{
+  background:none;
+  border:1px solid #f28c28;
+  color:#f28c28;
+  padding:0.35rem 0.7rem;
+  cursor:pointer;
+  font-size:0.9rem;
+}
+
+/* Social icons as round glyphs */
+.social-icons a{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:28px;
+  height:28px;
+  border-radius:50%;
+  border:1px solid #f28c28;
+  color:#f28c28;
+  font-size:0.85rem;
+  font-weight:600;
+  text-decoration:none;
+}
+
+/* Buy button: grey relief, orange text */
+.footer-right .buy-btn{
+  background:linear-gradient(#3a3a3a, #1f1f1f);
+  color:#f28c28;
+  padding:0.55rem 1.2rem;
+  text-decoration:none;
+  font-weight:500;
+  border-radius:3px;
+  box-shadow:0 2px 4px rgba(0,0,0,0.6);
+}
+
+
+
+.social-icons .icon{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:32px;
+  height:32px;
+  border-radius:50%;
+  border:1px solid #f28c28;
+  margin-right:0.5rem;
+}
+.social-icons svg{
+  width:16px;
+  height:16px;
+  fill:#f28c28;
+}
+
+
+
+/* --- CORRECTION : IMAGE DE FOND JUSQU'AU FOOTER --- */
+main{
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.site-footer{
+  margin-top: 0 !important;
+}
+
+
+
+/* ===== FOOTER AMÉLIORÉ ===== */
+.site-footer{
+  background:#000;
+  margin-top:4rem;
+  padding:1.5rem 0;
+}
+
+.site-footer .footer-inner{
+  max-width:1200px;
+  margin:0 auto;
+  padding:0 1.5rem;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.footer-left{
+  display:flex;
+  align-items:center;
+  gap:1rem;
+}
+
+.like-btn{
+  background:none;
+  border:1px solid #f28c28;
+  color:#f28c28;
+  padding:0.4rem 0.8rem;
+  cursor:pointer;
+}
+
+.social-icons a{
+  color:#f28c28;
+  font-size:1.1rem;
+  text-decoration:none;
+  margin-right:0.6rem;
+}
+
+.footer-right .buy-btn{
+  background:#f28c28;
+  color:#000;
+  padding:0.6rem 1.2rem;
+  text-decoration:none;
+  font-weight:500;
+}
+
+
+
+/* ===== FOOTER AMÉLIORÉ v2 ===== */
+.site-footer{
+  background:#000;
+  margin-top:4rem;
+  padding:1.6rem 0;
+}
+
+.site-footer .footer-inner{
+  max-width:1200px;
+  margin:0 auto;
+  padding:0 1.5rem;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.footer-left{
+  display:flex;
+  align-items:center;
+  gap:1.2rem;
+}
+
+.like-btn{
+  background:none;
+  border:1px solid #f28c28;
+  color:#f28c28;
+  padding:0.35rem 0.7rem;
+  cursor:pointer;
+  font-size:0.9rem;
+}
+
+/* Social icons as round glyphs */
+.social-icons a{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:28px;
+  height:28px;
+  border-radius:50%;
+  border:1px solid #f28c28;
+  color:#f28c28;
+  font-size:0.85rem;
+  font-weight:600;
+  text-decoration:none;
+}
+
+/* Buy button: grey relief, orange text */
+.footer-right .buy-btn{
+  background:linear-gradient(#3a3a3a, #1f1f1f);
+  color:#f28c28;
+  padding:0.55rem 1.2rem;
+  text-decoration:none;
+  font-weight:500;
+  border-radius:3px;
+  box-shadow:0 2px 4px rgba(0,0,0,0.6);
+}
+
+
+
+/* --- CORRECTION : IMAGE DE FOND JUSQU'AU FOOTER --- */
+main{
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.site-footer{
+  margin-top: 0 !important;
+}
+
+</style>
+<style>
+/* === PATCH DEMANDÉ : UNIQUEMENT CES DEUX POINTS === */
+
+/* 1) éclaircir le fond (déjà fait via remplacement du gradient ci-dessus) */
+
+/* 2) supprimer le cadre autour de la couverture */
+.hero > .card:first-child{
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+</style>
+<style>
+/* === Footer fixe (demandé) === */
+.site-footer, footer.site-footer{
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+}
+
+/* Évite que le contenu passe sous le footer */
+body{
+  padding-bottom: 110px;
+}
+</style>
+</head>
+<body>
+<header>
+<div class="nav">
+<div class="title">
+<a href="index.html">Le Testament d’Azénor</a>
+</div>
+<nav aria-label="Navigation" class="menu">
+<a href="lieux-du-roman.html">Lieux</a>
+<a href="personnages.html">Personnages</a>
+<a href="livre-des-conquetes.html">Conquêtes</a>
+<a href="veritable-legende-azenor.html">La légende</a>
+<a href="bibliographie.html">Bibliographie</a>
+<a href="making-off.html">Making off</a>
+<a href="contact.html">Contact</a>
+</nav>
+<div aria-label="Choix de la langue" class="lang">
+<a href="en/index.html" title="English version">🇬🇧</a>
+</div>
+</div>
+</header>
+<main>
+<section class="hero">
+<div class="card">
+<img alt="Couverture du livre Le Testament d’Azénor" class="cover" src="images/accueil/couverture.jpg"/>
+</div>
+<div class="card">
+<h1>Le Testament d’Azénor</h1>
+<div class="intro">De Brest à l’île d’Ouessant, des îles d’Aran aux rivages sauvages de Bréhat, ce roman plonge dans la fabuleuse légende d’Azénor et de son fils Budoc, entre histoire et mystère.
+
+Accusée d’adultère, la jeune princesse Azénor est condamnée à dériver sur l’océan. Son fils Budoc naît au cœur des îles d’Aran et grandit sous la protection de saint Enda, dans une école monastique où se forgent les grands esprits de son temps. Devenu moine à son tour, il ramènera en Armorique l’héritage de son maître et fondera sur l’île de Lavrec une école où s’épanouiront savoir et foi.
+
+Mais au centre de cette fresque historique se trouve un manuscrit, rédigé par Tadhgán l’Irlandais, ancien druide devenu moine et précepteur d’Azénor. Un texte qui renferme une vérité capable de bouleverser les certitudes et d’attiser les convoitises. Trahisons, rivalités et luttes d’influence s’entrelacent autour de ces pages interdites, tandis que l’avenir de la Bretagne et de l’Irlande se dessine dans l’ombre des monastères et des prophéties.
+
+S’appuyant sur les Vies des Saints de Bretagne et d’Irlande, ce roman historique, aux allures de polar médiéval, mêle réalité et légende dans une épopée où le savoir peut être un héritage… ou une malédiction.</div>
+<div class="actions">
+</div>
+</div>
+</section>
+</main>
+<script>
+// Set active state on the current page link in the menu (no HTML changes needed)
+window.addEventListener('DOMContentLoaded', () => {
+  const links = document.querySelectorAll('.menu a[href]');
+  if (!links.length) return;
+
+  const current = (location.pathname.split('/').pop() || 'index_ok.html').toLowerCase();
+  links.forEach(a => {
+    const href = (a.getAttribute('href') || '').split('?')[0].split('#')[0].toLowerCase();
+    const target = href.split('/').pop();
+    if (target && target === current) {
+      a.setAttribute('aria-current', 'page');
+      a.classList.add('active');
+    }
+  });
+});
+</script>
+<footer class="site-footer">
+<div class="footer-inner">
+<div class="footer-left">
+<div class="social-icons">
+<!-- LinkedIn -->
+<a class="icon" href="https://www.linkedin.com/sharing/share-offsite/?url=https://azenor.netlify.app/contact" rel="noopener" target="_blank" title="LinkedIn">
+<svg aria-hidden="true" viewbox="0 0 24 24">
+<path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.11 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8h4V24h-4V8zM8 8h3.8v2.2h.1c.5-1 1.8-2.2 3.8-2.2 4 0 4.7 2.6 4.7 6V24h-4v-7.8c0-1.9 0-4.2-2.6-4.2s-3 2-3 4v8H8V8z"></path>
+</svg>
+</a>
+<!-- X -->
+<a class="icon" href="https://twitter.com/intent/tweet?url=https://azenor.netlify.app/contact" rel="noopener" target="_blank" title="X">
+<svg aria-hidden="true" viewbox="0 0 24 24">
+<path d="M18.24 2H21l-6.6 7.55L22 22h-6.6l-4.7-6.1L5.4 22H2.6l7.1-8.1L2 2h6.7l4.3 5.6L18.24 2z"></path>
+</svg>
+</a>
+<!-- Facebook -->
+<a class="icon" href="https://www.facebook.com/sharer/sharer.php?u=https://azenor.netlify.app/contact" rel="noopener" target="_blank" title="Facebook">
+<svg aria-hidden="true" viewbox="0 0 24 24">
+<path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9v-2.9h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.8-1.6 1.5v1.8h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z"></path>
+</svg>
+</a>
+</div>
+</div>
+<div class="footer-right">
+<a class="buy-btn" href="achat.html">Acheter le livre</a>
+</div>
+</div>
+</footer>
+</body>
+</html>

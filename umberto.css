@@ -1,0 +1,34 @@
+
+/* Overrides spécifiques à la page Umberto (solution A) */
+
+/* Conserver le fond/personnage existant : on ne touche PAS au background du body. */
+
+/* Neutraliser la grille 2 colonnes pour cette page uniquement */
+body.personnage .character-grid {
+  grid-template-columns: 1fr !important;
+  align-items: start !important;
+}
+
+/* Masquer la colonne portrait si elle existe */
+body.personnage .character-grid .portrait {
+  display: none !important;
+}
+
+/* Centrer et agrandir l'image */
+body.personnage .extrait.excerpt.umberto-page {
+  width: 100% !important;
+  text-align: center !important;
+  padding-top: 1rem !important;
+}
+
+body.personnage .extrait.excerpt.umberto-page .umberto-image {
+  width: min(1400px, 92vw) !important;
+  height: auto !important;
+  display: block !important;
+  margin: 0 auto !important;
+}
+
+/* Optionnel : un peu d'air en bas */
+body.personnage main {
+  padding-bottom: 3rem !important;
+}
