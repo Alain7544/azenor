@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+
+<html lang="en" translate="no">
+<head>
+<meta name="google" content="notranslate"/>
+<meta charset="utf-8"/>
+<meta http-equiv="Content-Language" content="en"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+
+  <meta name="description" content="Contact page for The Testament of Azénor (author / rights).">
+  <link rel="canonical" href="https://alain7544.neocities.org/en/contact.html">
+  <link rel="alternate" hreflang="fr" href="https://alain7544.neocities.org/contact.html">
+  <link rel="alternate" hreflang="en" href="https://alain7544.neocities.org/en/contact.html">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Contact – The Testament of Azénor">
+  <meta property="og:description" content="Contact page for The Testament of Azénor (author / rights).">
+  <meta property="og:url" content="https://alain7544.neocities.org/en/contact.html">
+  <meta property="og:site_name" content="Le Testament d’Azénor">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Contact – The Testament of Azénor">
+  <meta name="twitter:description" content="Contact page for The Testament of Azénor (author / rights).">
+<title>Contact – The Testament of Azénor</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400&700&amp&family=Inter:wght@300&400&500&amp&display=swap" rel="stylesheet"/>
+<link href="../css/style.css" rel="stylesheet"/>
+<style>
+    /* Reprend l'esprit des pages existantes */
+    .titre-principal{
+      text-align:center;
+      color:#d48a3a;
+      font-weight:700;
+      margin-bottom:1.2em;
+    }
+    .contact main{
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 40px 40px 60px;
+      background: transparent;
+    }
+    .contact p, .contact li{ line-height: 1.6; }
+
+    /* Formulaire */
+    .contact-form{
+      margin-top: 22px;
+      padding: 22px;
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 14px;
+      background: rgba(0,0,0,0.25);
+      backdrop-filter: blur(2px);
+    }
+    .field{
+      margin: 12px 0 16px;
+    }
+    .field label{
+      display:block;
+      margin-bottom: 6px;
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      opacity: .95;
+    }
+    .field input, .field select, .field textarea{
+      width:100%;
+      padding: 12px 12px;
+      border-radius: 10px;
+      border: 1px solid rgba(255,255,255,0.14);
+      background: rgba(0,0,0,0.35);
+      color: #f0f0f0;
+      outline: none;
+      font-family: 'Inter', sans-serif;
+    }
+    .field textarea{ resize: vertical; min-height: 160px; }
+    .row{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+    @media (max-width: 720px){
+      .row{ grid-template-columns: 1fr; }
+      .contact main{ padding: 26px 18px 50px; }
+    }
+    .submit-row{
+      display:flex;
+      align-items:center;
+      gap: 12px;
+      margin-top: 10px;
+      flex-wrap: wrap;
+    }
+    .btn-send{
+      border: none;
+      border-radius: 999px;
+      padding: 12px 18px;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      cursor: pointer;
+      background: #d48a3a;
+      color: #111;
+    }
+    .form-hint{
+      font-family: 'Inter', sans-serif;
+      opacity: .85;
+      font-size: 0.95rem;
+    }
+
+    /* Pastilles réseaux */
+    .share{
+      margin-top: 26px;
+      display:flex;
+      align-items:center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .pill{
+      width: 44px;
+      height: 44px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.16);
+      background: rgba(0,0,0,0.30);
+      text-decoration: none;
+      transition: transform .08s ease;
+    }
+    .pill:hover{ transform: translateY(-1px); }
+    .pill svg{ width: 20px; height: 20px; fill: #d48a3a; }
+    .share small{
+      font-family: 'Inter', sans-serif;
+      opacity:.85;
+    }
+
+    /* Compteur */
+    .meta-line{
+      margin-top: 18px;
+      font-family: 'Inter', sans-serif;
+      opacity: .85;
+    }
+    .meta-line strong{ color:#d48a3a; font-weight:700; }
+
+    /* Message serveur */
+    .notice{
+      margin-top: 14px;
+      padding: 12px 14px;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.14);
+      background: rgba(0,0,0,0.25);
+      font-family: 'Inter', sans-serif;
+    }
+    .notice.ok{ border-color: rgba(212,138,58,0.55); }
+    .notice.err{ border-color: rgba(255,90,90,0.45); }
+  </style>
+<style>
+.author-bio{
+  max-width: 720px;
+  margin: 0 auto 2.5rem;
+  text-align: center;
+}
+.author-bio img{
+  width: 180px;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 1.2rem;
+}
+.author-bio p{
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  color: #f28c28;
+  font-style: italic;
+}
+</style>
+<style>
+/* ===== FOOTER AMÉLIORÉ ===== */
+.site-footer{
+  background:#000;
+  margin-top:4rem;
+  padding:1.5rem 0;
+}
+
+.site-footer .footer-inner{
+  max-width:1200px;
+  margin:0 auto;
+  padding:0 1.5rem;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.footer-left{
+  display:flex;
+  align-items:center;
+  gap:1rem;
+}
+
+.like-btn{
+  background:none;
+  border:1px solid #f28c28;
+  color:#f28c28;
+  padding:0.4rem 0.8rem;
+  cursor:pointer;
+}
+
+.social-icons a{
+  color:#f28c28;
+  font-size:1.1rem;
+  text-decoration:none;
+  margin-right:0.6rem;
+}
+
+.footer-right .buy-btn{
+  background:#f28c28;
+  color:#000;
+  padding:0.6rem 1.2rem;
+  text-decoration:none;
+  font-weight:500;
+}
+</style>
+<style>
+/* ===== FOOTER AMÉLIORÉ v2 ===== */
+.site-footer{
+  background:#000;
+  margin-top:4rem;
+  padding:1.6rem 0;
+}
+
+.site-footer .footer-inner{
+  max-width:1200px;
+  margin:0 auto;
+  padding:0 1.5rem;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.footer-left{
+  display:flex;
+  align-items:center;
+  gap:1.2rem;
+}
+
+.like-btn{
+  background:none;
+  border:1px solid #f28c28;
+  color:#f28c28;
+  padding:0.35rem 0.7rem;
+  cursor:pointer;
+  font-size:0.9rem;
+}
+
+/* Social icons as round glyphs */
+.social-icons a{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:28px;
+  height:28px;
+  border-radius:50%;
+  border:1px solid #f28c28;
+  color:#f28c28;
+  font-size:0.85rem;
+  font-weight:600;
+  text-decoration:none;
+}
+
+/* Buy button: grey relief, orange text */
+.footer-right .buy-btn{
+  background:linear-gradient(#3a3a3a, #1f1f1f);
+  color:#f28c28;
+  padding:0.55rem 1.2rem;
+  text-decoration:none;
+  font-weight:500;
+  border-radius:3px;
+  box-shadow:0 2px 4px rgba(0,0,0,0.6);
+}
+</style>
+<style>
+.social-icons .icon{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:32px;
+  height:32px;
+  border-radius:50%;
+  border:1px solid #f28c28;
+  margin-right:0.5rem;
+}
+.social-icons svg{
+  width:16px;
+  height:16px;
+  fill:#f28c28;
+}
+</style>
+<style>
+/* --- CORRECTION : IMAGE DE FOND JUSQU'AU FOOTER --- */
+main{
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.site-footer{
+  margin-top: 0 !important;
+}
+</style>
+<style>
+/* ===== FOOTER AMÉLIORÉ ===== */
+.site-footer{
+  background:#000;
+  margin-top:4rem;
+  padding:1.5rem 0;
+}
+
+.site-footer .footer-inner{
+  max-width:1200px;
+  margin:0 auto;
+  padding:0 1.5rem;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.footer-left{
+  display:flex;
+  align-items:center;
+  gap:1rem;
+}
+
+.like-btn{
+  background:none;
+  border:1px solid #f28c28;
+  color:#f28c28;
+  padding:0.4rem 0.8rem;
+  cursor:pointer;
+}
+
+.social-icons a{
+  color:#f28c28;
+  font-size:1.1rem;
+  text-decoration:none;
+  margin-right:0.6rem;
+}
+
+.footer-right .buy-btn{
+  background:#f28c28;
+  color:#000;
+  padding:0.6rem 1.2rem;
+  text-decoration:none;
+  font-weight:500;
+}
+</style>
+<style>
+/* ===== FOOTER AMÉLIORÉ v2 ===== */
+.site-footer{
+  background:#000;
+  margin-top:4rem;
+  padding:1.6rem 0;
+}
+
+.site-footer .footer-inner{
+  max-width:1200px;
+  margin:0 auto;
+  padding:0 1.5rem;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.footer-left{
+  display:flex;
+  align-items:center;
+  gap:1.2rem;
+}
+
+.like-btn{
+  background:none;
+  border:1px solid #f28c28;
+  color:#f28c28;
+  padding:0.35rem 0.7rem;
+  cursor:pointer;
+  font-size:0.9rem;
+}
+
+/* Social icons as round glyphs */
+.social-icons a{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:28px;
+  height:28px;
+  border-radius:50%;
+  border:1px solid #f28c28;
+  color:#f28c28;
+  font-size:0.85rem;
+  font-weight:600;
+  text-decoration:none;
+}
+
+/* Buy button: grey relief, orange text */
+.footer-right .buy-btn{
+  background:linear-gradient(#3a3a3a, #1f1f1f);
+  color:#f28c28;
+  padding:0.55rem 1.2rem;
+  text-decoration:none;
+  font-weight:500;
+  border-radius:3px;
+  box-shadow:0 2px 4px rgba(0,0,0,0.6);
+}
+</style>
+<style>
+/* --- CORRECTION : IMAGE DE FOND JUSQU'AU FOOTER --- */
+main{
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.site-footer{
+  margin-top: 0 !important;
+}
+</style>
+<style>.nav-lang{display:flex;align-items:center;gap:.45rem;white-space:nowrap}
+.nav-lang a{text-decoration:none;font-size:1.1rem}
+.nav-lang span{opacity:.65}
+</style></head>
+<body class="contact" style="background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.85)), url('manuscrit.jpeg') center / cover no-repeat fixed;">
+<header class="site-header">
+<nav class="nav">
+<div class="nav-title">
+<a href="../index.html">back</a>
+</div><div aria-label="Language switch" class="nav-lang"><a href="../index.html" title="Version française" lang="fr" hreflang="fr">🇫🇷</a><span> | </span><a href="index.html" title="English version">🇬🇧</a></div>
+<div class="nav-menu"><a href="index.html">home</a><a href="personnages.html">characters</a><a href="making-off.html">making off</a><a href="rights.html">rights &amp; translation</a><a href="contact.html">contact</a></div>
+</nav>
+</header>
+<main>
+<h1 class="titre-principal">Contact</h1>
+<section class="author-bio">
+<img alt="Alain Bertrand, auteur du Testament d’Azénor" src="../images/personnages/alain.jpg"/>
+<p>This website is dedicated to the novel The Testament of Azénor.</p>
+</section>
+<p>For any questions regarding the book, its historical background, or possible translation and publishing opportunities, you may contact the author using the form below.</p>
+<div id="serverNotice" style="display:none"></div>
+<section aria-label="Formulaire de contact" class="contact-form">
+<form action="send.php" method="post">
+<!-- anti-spam (champ invisible) -->
+<input autocomplete="off" name="website" style="position:absolute; left:-10000px; top:auto; width:1px; height:1px; overflow:hidden;" tabindex="-1" type="text"/>
+<div class="row">
+<div class="field">
+<label for="name">Name</label>
+<input id="name" name="name" required="" type="text"/>
+</div>
+<div class="field">
+<label for="email">Email address</label>
+<input id="email" name="email" required="" type="email"/>
+</div>
+</div>
+<div class="field">
+<label for="subject">Subject</label>
+<select id="subject" name="subject">
+<option value="Question sur le livre">Question sur le livre</option>
+<option value="Sources / références">Sources / références</option>
+<option value="Rencontre / intervention">Rencontre / intervention</option>
+<option value="Retour de lecture">Retour de lecture</option>
+<option value="Autre">Autre</option>
+</select>
+</div>
+<div class="field">
+<label for="message">Message</label>
+<textarea id="message" name="message" required=""></textarea>
+</div>
+<div class="submit-row">
+<button class="btn-send" type="submit">Send</button>
+</div>
+</form>
+</section>
+<p style="margin-top:26px; font-style:italic; text-align:center; color:#d48a3a;">Messages will be read with care and forwarded when appropriate.</p>
+</main>
+<script>
+  // --- Message de retour (si send.php redirige avec ?sent=1 ou ?error=1) ---
+  const params = new URLSearchParams(window.location.search);
+  const box = document.getElementById('serverNotice');
+  if (params.get('sent') === '1') {
+    box.className = 'notice ok';
+    box.textContent = "Merci — votre message a bien été envoyé.";
+    box.style.display = 'block';
+  } else if (params.get('error') === '1') {
+    box.className = 'notice err';
+    box.textContent = "Désolé — l’envoi a échoué. Vous pouvez réessayer un peu plus tard.";
+    box.style.display = 'block';
+  }
+</script>
+<footer class="site-footer">
+<div class="footer-inner">
+<div class="footer-left">
+<button class="like-btn">❤</button>
+<div class="social-icons">
+<!-- LinkedIn -->
+<a class="icon" href="https://www.linkedin.com/sharing/share-offsite/?url=https://azenor.netlify.app/contact" rel="noopener" target="_blank" title="LinkedIn">
+<svg aria-hidden="true" viewbox="0 0 24 24">
+<path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.11 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8h4V24h-4V8zM8 8h3.8v2.2h.1c.5-1 1.8-2.2 3.8-2.2 4 0 4.7 2.6 4.7 6V24h-4v-7.8c0-1.9 0-4.2-2.6-4.2s-3 2-3 4v8H8V8z"></path>
+</svg>
+</a>
+<!-- X -->
+<a class="icon" href="https://twitter.com/intent/tweet?url=https://azenor.netlify.app/contact" rel="noopener" target="_blank" title="X">
+<svg aria-hidden="true" viewbox="0 0 24 24">
+<path d="M18.24 2H21l-6.6 7.55L22 22h-6.6l-4.7-6.1L5.4 22H2.6l7.1-8.1L2 2h6.7l4.3 5.6L18.24 2z"></path>
+</svg>
+</a>
+<!-- Facebook -->
+<a class="icon" href="https://www.facebook.com/sharer/sharer.php?u=https://azenor.netlify.app/contact" rel="noopener" target="_blank" title="Facebook">
+<svg aria-hidden="true" viewbox="0 0 24 24">
+<path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9v-2.9h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.8-1.6 1.5v1.8h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z"></path>
+</svg>
+</a>
+</div>
+</div>
+<div class="footer-right">
+<a class="buy-btn" href="achat.html">Acheter le livre</a>
+</div>
+</div>
+</footer>
+</body>
+</html>
