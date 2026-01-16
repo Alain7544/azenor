@@ -204,6 +204,25 @@ body{
   z-index: 1000;
 }
 </style>
+<style>
+
+/* === PATCH iPhone : débloquer le haut de la couverture === */
+/* iOS Safari + header/footer fixes => il faut réserver l'espace */
+:root{ --header-h: 90px; }
+
+@media (max-width: 768px){
+  :root{ --header-h: 100px; }
+  .hero{ padding-top: var(--header-h); }
+}
+
+/* garantir le scroll vertical réel */
+html, body{
+  height: auto;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+</style>
 </head>
 <body>
 <!-- INTRO THÉÂTRALE -->
