@@ -223,6 +223,23 @@ html, body{
 }
 
 </style>
+<style>
+
+/* === PATCH iPhone : garder le header fixe (sans recasser le scroll) === */
+@media (max-width: 768px){
+  header{
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 9999;
+  }
+  /* si le footer est fixed aussi, on réserve l'espace en bas */
+  body{ padding-top: var(--header-h); padding-bottom: 90px; }
+}
+
+</style>
 </head>
 <body>
 <!-- INTRO THÉÂTRALE -->
