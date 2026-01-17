@@ -6,14 +6,14 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 
   <meta name="description" content="Umbertus — Le Testament d’Azénor — page du site officiel du Testament d’Azénor : univers, personnages et ressources.">
-  <link rel="canonical" href="https://alain7544.neocities.org/umbertus.html">
-  <link rel="alternate" hreflang="fr" href="https://alain7544.neocities.org/umbertus.html">
-  <link rel="alternate" hreflang="en" href="https://alain7544.neocities.org/en/umbertus.html">
+  <link rel="canonical" href="https://azenor.org/umbertus.html">
+  <link rel="alternate" hreflang="fr" href="https://azenor.org/umbertus.html">
+  <link rel="alternate" hreflang="en" href="https://azenor.org/en/umbertus.html">
   <meta property="og:locale" content="fr_FR">
   <meta property="og:type" content="article">
   <meta property="og:title" content="Umbertus — Le Testament d’Azénor">
   <meta property="og:description" content="Umbertus — Le Testament d’Azénor — page du site officiel du Testament d’Azénor : univers, personnages et ressources.">
-  <meta property="og:url" content="https://alain7544.neocities.org/umbertus.html">
+  <meta property="og:url" content="https://azenor.org/umbertus.html">
   <meta property="og:site_name" content="Le Testament d’Azénor">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Umbertus — Le Testament d’Azénor">
@@ -273,32 +273,40 @@ main{
   margin-top: 0 !important;
 }
 </style>
-  <style>
-a.lien-discret-orange {
-  text-decoration: none;
-  color: #f28c28;
-  cursor: pointer;
+<style>
+/* Lien discret orange (sans soulignage) */
+a.lien-discret-orange{
+  text-decoration:none;
+  color:#f28c28;
+  cursor:pointer;
+}
+a.lien-discret-orange:hover{
+  opacity:0.85;
+}
+a.lien-discret-orange:focus{
+  outline:none;
+  text-decoration:underline;
 }
 
-a.lien-discret-orange:hover {
-  opacity: 0.85;
+/* Phrase de renvoi : en bas de la colonne texte, sans guillemets */
+.umbertus-cta2{
+  margin-top:0.6rem;
+  font-style:normal;
+  letter-spacing:0.02em;
+  text-transform:none;
 }
-
-a.lien-discret-orange:focus {
-  outline: none;
-  text-decoration: underline;
+/* Si .character-grid est une grille : place la phrase sous le texte (colonne 2) */
+.character-grid .umbertus-cta2{
+  grid-column:2;
 }
-
-  <style>
-/* Désactive toute injection de texte décoratif dans la zone extrait */
-.extrait::before,
-.extrait::after,
-.excerpt::before,
-.excerpt::after {
-  content: none !important;
-  display: none !important;
+/* Par sécurité : aucune déco de citation sur cette phrase */
+.umbertus-cta2::before,
+.umbertus-cta2::after{
+  content:none !important;
+  display:none !important;
 }
 </style>
+
 </meta></meta></head>
 <body class="personnage">
 <header class="site-header">
@@ -327,15 +335,9 @@ a.lien-discret-orange:focus {
 <p>C’était un missionnaire Romain, du nom d’Umbertus, qui avait accompagné Germain d’Auxerre dans son deuxième voyage en Bretagne Insulaire, avec ses compagnons Sévère et Hilaire. Originaire d’Alexandria, il avait fait ses études à Taurasia.</p>
 <p>L’abbé Umbertus était un homme imposant non par la force de son corps, mais par la profondeur de son esprit. Il portait toujours une robe monastique usée, tachée d’encre et marquée par des années à feuilleter des parchemins. Il incarnait le stéréotype du moine romain érudit, plus préoccupé par la logique et la doctrine que par les mystères du monde. Sa barbe abondante et soigneusement coiffée oscillait entre le gris et le noir, reflétant les marques du temps. Il avait une apparence sereine, inspirant le respect, voire la crainte. Ses mains trahissaient un homme plus habitué à la lecture des manuscrits qu’aux travaux manuels.</p>
 <p>Dès son arrivée, il se démarqua des autres moines, car il portait la tonsure romaine. Son front large, dégarni, semblait taillé pour la réflexion, tandis que ses sourcils épais lui donnaient un regard perçant. Derrière ses yeux vifs et scrutateurs se cachait une curiosité insatiable, capable de sonder aussi bien les livres que les âmes. Son nez aquilin, finement ciselé, ajoutait à son allure de penseur, alors que ses lèvres délicates murmuraient souvent des mots latins, comme s’il conversait avec les anciens auteurs qu’il étudiait sans relâche pour lutter contre les hérésies, tels que Augustin d’Hippone, Grégoire le Grand, Ambroise de Milan ou Jérôme de Stridon.</p>
-<p style="margin-top:0.8rem; text-align:left;">
-  <a href="umberto.html" class="lien-discret-orange">
-    un visage étrangement familier, pour qui sait regarder de près.
-  </a>
-</p>
-  <p class="sans-guillemets" style="margin-top:2rem;">
-  <a href="umberto.html" class="lien-discret-orange">
-    un visage étrangement familier, pour qui sait regarder de près.
-  </a>
+</div>
+<p class="umbertus-cta2">
+  <a href="umberto.html" class="lien-discret-orange">un visage étrangement familier, pour qui sait regarder de près.</a>
 </p>
 </section>
 </main>
