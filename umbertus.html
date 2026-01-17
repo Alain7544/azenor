@@ -301,6 +301,16 @@ p.sans-guillemets a::after {
   content: "" !important;
   display: none !important;
 }
+  <style>
+/* Désactive toute injection de texte décoratif dans la zone extrait */
+.extrait::before,
+.extrait::after,
+.excerpt::before,
+.excerpt::after {
+  content: none !important;
+  display: none !important;
+}
+</style>
 </meta></meta></head>
 <body class="personnage">
 <header class="site-header">
