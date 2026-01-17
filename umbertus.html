@@ -289,9 +289,18 @@ a.lien-discret-orange:focus {
   text-decoration: underline;
 }
 </style>
-  .sans-guillemets::before,
-.sans-guillemets::after {
-  content: none !important;
+ /* Supprime les guillemets ajoutés par CSS (open-quote/close-quote ou “ ”) */
+.extrait.excerpt p.sans-guillemets::before,
+.extrait.excerpt p.sans-guillemets::after,
+.extrait.excerpt p.sans-guillemets a::before,
+.extrait.excerpt p.sans-guillemets a::after,
+p.sans-guillemets::before,
+p.sans-guillemets::after,
+p.sans-guillemets a::before,
+p.sans-guillemets a::after {
+  content: "" !important;
+  display: none !important;
+}
 }
 </meta></meta></head>
 <body class="personnage">
