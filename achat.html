@@ -34,12 +34,6 @@ h1{
   margin-bottom: 2rem;
 }
 
-.coming-soon{
-  font-style: italic;
-  opacity: 0.9;
-  margin-bottom: 2.5rem;
-}
-
 .buy-box{
   border: 1px solid rgba(255,255,255,0.2);
   padding: 2.5rem 2rem;
@@ -94,6 +88,70 @@ h1{
   background: #f28c28;
   color: #000;
 }
+
+/* Bloc autres points de vente (avec logos) */
+.retailers{
+  margin-top: 2.8rem;
+  max-width: 560px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.98rem;
+  opacity: 0.92;
+}
+
+.retailers h2{
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1.1rem;
+  color: #fff;
+  margin: 0 0 1rem 0;
+  text-align: center;
+}
+
+.retailer-list{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.retailer-list li{
+  border-top: 1px solid rgba(255,255,255,0.12);
+}
+
+.retailer-list li:first-child{
+  border-top: none;
+}
+
+.retailer-list a{
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+  padding: 0.9rem 0;
+  text-decoration: none;
+  color: #f28c28;
+}
+
+.retailer-list img{
+  width: 42px;
+  height: auto;
+  opacity: 0.95;
+}
+
+.retailer-list span{
+  border-bottom: 1px solid rgba(242,140,40,0.35);
+}
+
+.retailer-list a:hover span{
+  border-bottom-color: #f28c28;
+}
+
+.small-note{
+  margin-top: 1.8rem;
+  font-size: 0.95rem;
+  opacity: 0.85;
+  text-align: center;
+}
 </style>
 </head>
 
@@ -140,12 +198,48 @@ h1{
      Acheter chez l’éditeur
   </a>
 
-  <div style="margin-top:3rem;"></div>
+  <div class="retailers" aria-label="Autres points de vente">
+    <h2>Autres points de vente</h2>
 
-  <p style="font-size:0.95rem; opacity:0.85;">
-    D’autres points de vente (librairies indépendantes et plateformes en ligne)
-    pourront être ajoutés ultérieurement.
-  </p>
+    <ul class="retailer-list">
+      <li>
+        <a href="https://www.leslibraires.fr/livre/26250550-le-testament-d-azenor-une-epopee-du-vie-siecle-breton-alain-bertrand-l-harmattan"
+           target="_blank" rel="noopener">
+          <img src="images/logos/leslibraires.png" alt="Leslibraires.fr">
+          <span>Leslibraires.fr</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="https://www.decitre.fr/livres/le-testament-d-azenor-9782336593012.html"
+           target="_blank" rel="noopener">
+          <img src="images/logos/decitre.png" alt="Decitre">
+          <span>Decitre</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="https://www.cultura.com/p-le-testament-d-azenor-une-epopee-du-vie-siecle-breton-9782336593012.html"
+           target="_blank" rel="noopener">
+          <img src="images/logos/cultura.png" alt="Cultura">
+          <span>Cultura</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="https://www.amazon.fr/testament-dAz%C3%A9nor-%C3%A9pop%C3%A9e-si%C3%A8cle-breton/dp/2336593017/ref=sr_1_1?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=28S5KE9JMKTB0&dib=eyJ2IjoiMSJ9.wcOud1bhG8QNd3YWVDZmUA.VRmGNyFgGgebmHIQdSI2mUXhozz7CILHbIMWzyvAEQY&dib_tag=se&keywords=LE+TESTAMENT+D%27az%C3%A9nor&qid=1769279881&sprefix=le+testament+d%27az%C3%A9nor%2Caps%2C251&sr=8-1"
+           target="_blank" rel="noopener">
+          <img src="images/logos/amazon.png" alt="Amazon">
+          <span>Amazon</span>
+        </a>
+      </li>
+    </ul>
+
+    <p class="small-note">
+      Le livre peut également être commandé dans toutes les librairies.
+    </p>
+  </div>
+
 </div>
 </main>
 
