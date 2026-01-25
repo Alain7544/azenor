@@ -50,24 +50,27 @@ h1{
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.8rem;
+  gap: 1.1rem;
 }
 
 .publisher-logo{
   background:#0a7a3d; /* vert Harmattan */
   padding: 1rem 1.4rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.publisher-logo a{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .publisher-logo img{
-  max-width: 220px;
+  max-width: 240px;
   height: auto;
   display: block;
-}
-
-.publisher-name{
-  font-family: 'Inter', sans-serif;
-  font-size: 0.95rem;
-  opacity: 0.85;
 }
 
 /* Bouton achat */
@@ -89,50 +92,56 @@ h1{
   color: #000;
 }
 
-/* Autres points de vente */
+/* Autres points de vente : LOGOS UNIQUEMENT */
 .retailers{
   margin-top: 2.8rem;
-  max-width: 560px;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: left;
   font-family: 'Inter', sans-serif;
-  font-size: 0.98rem;
-  opacity: 0.92;
+  opacity: 0.95;
 }
 
 .retailers h2{
   font-family: 'Libre Baskerville', serif;
   font-size: 1.1rem;
   color: #fff;
-  margin: 0 0 1rem 0;
+  margin: 0 0 1.2rem 0;
   text-align: center;
 }
 
-.retailers ul{
-  list-style: none;
-  padding: 0;
-  margin: 0;
+/* Grille centrée */
+.retailer-logos{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(140px, 220px));
+  gap: 1.1rem 1.2rem;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 520px;
 }
 
-.retailers li{
-  padding: 0.65rem 0;
-  border-top: 1px solid rgba(255,255,255,0.12);
-  line-height: 1.35;
-}
-
-.retailers li:first-child{
-  border-top: none;
-}
-
-.retailers a{
-  color: #f28c28;
+/* “tuiles” logos */
+.retailer-logos a{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.9rem 1rem;
+  border: 1px solid rgba(255,255,255,0.14);
+  background: rgba(255,255,255,0.03);
   text-decoration: none;
-  border-bottom: 1px solid rgba(242,140,40,0.35);
+  transition: transform 0.15s ease, border-color 0.15s ease;
 }
 
-.retailers a:hover{
-  border-bottom-color: #f28c28;
+.retailer-logos a:hover{
+  transform: translateY(-1px);
+  border-color: rgba(242,140,40,0.55);
+}
+
+.retailer-logos img{
+  max-width: 180px;
+  max-height: 46px;
+  width: auto;
+  height: auto;
+  display: block;
+  filter: none;
 }
 
 .small-note{
@@ -140,6 +149,17 @@ h1{
   font-size: 0.95rem;
   opacity: 0.85;
   text-align: center;
+}
+
+@media (max-width: 520px){
+  .retailer-logos{
+    grid-template-columns: 1fr;
+    max-width: 340px;
+  }
+  .retailer-logos img{
+    max-width: 200px;
+    max-height: 52px;
+  }
 }
 </style>
 </head>
@@ -171,15 +191,18 @@ h1{
     directement sur le site officiel de l’éditeur.
   </p>
 
+  <!-- Logo éditeur cliquable (SANS doublon de texte) -->
   <div class="publisher">
     <div class="publisher-logo">
-      <img src="images/accueil/logo-harmattan.png"
-           alt="Logo des Éditions L’Harmattan"
-           onerror="if(!this.dataset.try){this.dataset.try=1;this.src='/images/accueil/logo-harmattan.png';return;}if(this.dataset.try==1){this.dataset.try=2;this.src='images/accueil/Logo-harmattan.jpg';return;}if(this.dataset.try==2){this.dataset.try=3;this.src='/images/accueil/Logo-harmattan.jpg';return;}">
+      <a href="https://www.editions-harmattan.fr/catalogue/livre/le-testament-dazenor/81789" target="_blank" rel="noopener" aria-label="Acheter chez L’Harmattan">
+        <img src="images/accueil/logo-harmattan.png"
+             alt="Éditions L’Harmattan"
+             onerror="if(!this.dataset.try){this.dataset.try=1;this.src='/images/accueil/logo-harmattan.png';return;}if(this.dataset.try==1){this.dataset.try=2;this.src='images/accueil/Logo-harmattan.jpg';return;}if(this.dataset.try==2){this.dataset.try=3;this.src='/images/accueil/Logo-harmattan.jpg';return;}">
+      </a>
     </div>
-    <div class="publisher-name">Éditions L’Harmattan</div>
   </div>
 
+  <!-- Bouton optionnel : tu peux le garder ou le supprimer -->
   <a href="https://www.editions-harmattan.fr/catalogue/livre/le-testament-dazenor/81789"
      target="_blank"
      rel="noopener"
@@ -187,30 +210,35 @@ h1{
      Acheter chez l’éditeur
   </a>
 
+  <!-- Autres points de vente : LOGOS CLIQUABLES UNIQUEMENT -->
   <div class="retailers" aria-label="Autres points de vente">
     <h2>Autres points de vente</h2>
-    <ul>
-      <li>
-        Librairies indépendantes :
-        <a href="https://www.leslibraires.fr/livre/26250550-le-testament-d-azenor-une-epopee-du-vie-siecle-breton-alain-bertrand-l-harmattan"
-           target="_blank" rel="noopener">Leslibraires.fr</a>
-      </li>
-      <li>
-        Librairie en ligne :
-        <a href="https://www.decitre.fr/livres/le-testament-d-azenor-9782336593012.html"
-           target="_blank" rel="noopener">Decitre</a>
-      </li>
-      <li>
-        Cultura :
-        <a href="https://www.cultura.com/p-le-testament-d-azenor-une-epopee-du-vie-siecle-breton-9782336593012.html"
-           target="_blank" rel="noopener">voir la page du livre</a>
-      </li>
-      <li>
-        Amazon :
-        <a href="https://www.amazon.fr/dp/2336593017"
-           target="_blank" rel="noopener">voir la page du livre</a>
-      </li>
-    </ul>
+
+    <div class="retailer-logos">
+      <a href="https://www.leslibraires.fr/livre/26250550-le-testament-d-azenor-une-epopee-du-vie-siecle-breton-alain-bertrand-l-harmattan"
+         target="_blank" rel="noopener" aria-label="Leslibraires.fr">
+        <img src="images/accueil/logo-leslibraires.png" alt="Leslibraires.fr"
+             onerror="this.style.display='none'">
+      </a>
+
+      <a href="https://www.decitre.fr/livres/le-testament-d-azenor-9782336593012.html"
+         target="_blank" rel="noopener" aria-label="Decitre">
+        <img src="images/accueil/logo-decitre.png" alt="Decitre"
+             onerror="this.style.display='none'">
+      </a>
+
+      <a href="https://www.cultura.com/p-le-testament-d-azenor-une-epopee-du-vie-siecle-breton-9782336593012.html"
+         target="_blank" rel="noopener" aria-label="Cultura">
+        <img src="images/accueil/logo-cultura.png" alt="Cultura"
+             onerror="this.style.display='none'">
+      </a>
+
+      <a href="https://www.amazon.fr/dp/2336593017"
+         target="_blank" rel="noopener" aria-label="Amazon">
+        <img src="images/accueil/logo-amazon.png" alt="Amazon"
+             onerror="this.style.display='none'">
+      </a>
+    </div>
 
     <p class="small-note">
       Le livre peut également être commandé dans toutes les librairies.
