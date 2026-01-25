@@ -5,7 +5,7 @@
 <title>Acheter le livre – Le Testament d’Azénor</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-<meta name="description" content="Acheter le livre – Le Testament d’Azénor — page du site officiel du Testament d’Azénor.">
+<meta name="description" content="Acheter le livre – Le Testament d’Azénor — page du site officiel.">
 <link rel="canonical" href="https://azenor.org/achat.html">
 
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
@@ -22,14 +22,18 @@ main{
 }
 
 h1{
-  color: #f28c28;
   font-family: 'Libre Baskerville', serif;
-  margin-bottom: 2.5rem;
+  color: #f28c28;
+  margin-bottom: 3rem;
 }
 
-.buy-box{
-  border: 1px solid rgba(255,255,255,0.2);
-  padding: 3rem 2rem;
+.buy-section{
+  margin-bottom: 3.5rem;
+}
+
+.harmattan-logo img{
+  max-width: 260px;
+  height: auto;
 }
 
 .buy-links{
@@ -37,15 +41,14 @@ h1{
   flex-direction: column;
   align-items: center;
   gap: 1.2rem;
-  margin-top: 2rem;
   font-family: 'Inter', sans-serif;
 }
 
 .buy-links a{
-  font-size: 1.15rem;
+  font-size: 1.1rem;
   color: #f28c28;
   text-decoration: none;
-  padding: 0.6rem 1.2rem;
+  padding: 0.6rem 1.4rem;
   border: 1px solid rgba(242,140,40,0.6);
   transition: background 0.2s ease, color 0.2s ease;
 }
@@ -64,6 +67,7 @@ h1{
 </head>
 
 <body>
+
 <header class="site-header">
 <nav class="nav">
   <div class="nav-title">
@@ -82,32 +86,37 @@ h1{
 </header>
 
 <main>
+
 <h1>Acheter le livre</h1>
 
-<div class="buy-box">
+<!-- BLOC ÉDITEUR : CONSERVÉ -->
+<section class="buy-section harmattan-logo">
+  <a href="https://www.editions-harmattan.fr/catalogue/livre/le-testament-dazenor/81789"
+     target="_blank" rel="noopener">
+    <img src="images/accueil/logo-harmattan.png"
+         alt="Acheter chez L’Harmattan">
+  </a>
+</section>
 
+<!-- AUTRES POINTS DE VENTE : TEXTE UNIQUEMENT -->
+<section class="buy-section">
   <div class="buy-links">
-    <a href="https://www.editions-harmattan.fr/catalogue/livre/le-testament-dazenor/81789"
-       target="_blank" rel="noopener">
-       Acheter chez L’Harmattan
-    </a>
-
-    <a href="https://www.leslibraires.fr/livre/26250550-le-testament-d-azenor-une-epopee-du-vie-siecle-breton-alain-bertrand-l-harmattan"
+    <a href="https://www.leslibraires.fr"
        target="_blank" rel="noopener">
        Leslibraires.fr
     </a>
 
-    <a href="https://www.decitre.fr/livres/le-testament-d-azenor-9782336593012.html"
+    <a href="https://www.decitre.fr"
        target="_blank" rel="noopener">
        Decitre
     </a>
 
-    <a href="https://www.cultura.com/p-le-testament-d-azenor-une-epopee-du-vie-siecle-breton-9782336593012.html"
+    <a href="https://www.cultura.com"
        target="_blank" rel="noopener">
        Cultura
     </a>
 
-    <a href="https://www.amazon.fr/dp/2336593017"
+    <a href="https://www.amazon.fr"
        target="_blank" rel="noopener">
        Amazon
     </a>
@@ -116,8 +125,8 @@ h1{
   <p class="small-note">
     Le livre peut également être commandé dans toutes les librairies.
   </p>
+</section>
 
-</div>
 </main>
 
 </body>
