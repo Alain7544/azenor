@@ -3,43 +3,153 @@
 <head>
 <meta charset="utf-8"/>
 <title>Acheter le livre – Le Testament d’Azénor</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 
 <meta name="description" content="Acheter le livre – Le Testament d’Azénor — page du site officiel du Testament d’Azénor : univers, personnages et ressources.">
+<link rel="canonical" href="https://alain7544.neocities.org/achat.html">
+
+<meta property="og:locale" content="fr_FR">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Acheter le livre – Le Testament d’Azénor">
+<meta property="og:description" content="Acheter le livre – Le Testament d’Azénor — page du site officiel du Testament d’Azénor : univers, personnages et ressources.">
+<meta property="og:url" content="https://alain7544.neocities.org/achat.html">
+<meta property="og:site_name" content="Le Testament d’Azénor">
+
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"/>
 <link href="css/style.css?v=20260115" rel="stylesheet"/>
 
 <style>
-main{max-width:900px;margin:4rem auto;padding:0 1.5rem;text-align:center}
-h1{color:#f28c28;font-family:'Libre Baskerville',serif;margin-bottom:2rem}
-.buy-box{border:1px solid rgba(255,255,255,0.2);padding:2.5rem 2rem;margin-top:2rem}
-.buy-box p{margin-bottom:1.2rem}
-.publisher{margin:2rem 0 1.5rem;display:flex;flex-direction:column;align-items:center;gap:.8rem}
-.publisher-logo{background:#0a7a3d;padding:1rem 1.4rem}
-.publisher-logo img{max-width:220px;height:auto;display:block}
-.publisher-name{font-family:'Inter',sans-serif;font-size:.95rem;opacity:.85}
-.buy-link{display:inline-block;margin-top:1.2rem;padding:.9rem 1.8rem;border:1px solid #f28c28;color:#f28c28;background:transparent;font-family:'Inter',sans-serif;font-weight:500;text-decoration:none;transition:all .25s ease}
-.buy-link:hover{background:#f28c28;color:#000}
+main{
+  max-width: 900px;
+  margin: 4rem auto;
+  padding: 0 1.5rem;
+  text-align: center;
+}
 
-.retailers{margin-top:2.8rem;max-width:560px;margin-left:auto;margin-right:auto;text-align:left;font-family:'Inter',sans-serif;font-size:.98rem;opacity:.92}
-.retailers h2{font-family:'Libre Baskerville',serif;font-size:1.1rem;color:#fff;margin:0 0 1rem 0;text-align:center}
-.retailer-list{list-style:none;padding:0;margin:0}
-.retailer-list li{border-top:1px solid rgba(255,255,255,0.12)}
-.retailer-list li:first-child{border-top:none}
-.retailer-list a{display:flex;align-items:center;gap:1.1rem;padding:.95rem 0;text-decoration:none;color:#f28c28}
-.retailer-list img{width:90px;height:auto;display:block}
-.retailer-list span{border-bottom:1px solid rgba(242,140,40,0.35)}
-.retailer-list a:hover span{border-bottom-color:#f28c28}
-.small-note{margin-top:1.8rem;font-size:.95rem;opacity:.85;text-align:center}
+h1{
+  color: #f28c28;
+  font-family: 'Libre Baskerville', serif;
+  margin-bottom: 2rem;
+}
+
+.buy-box{
+  border: 1px solid rgba(255,255,255,0.2);
+  padding: 2.5rem 2rem;
+  margin-top: 2rem;
+}
+
+.buy-box p{
+  margin-bottom: 1.2rem;
+}
+
+/* Bloc éditeur */
+.publisher{
+  margin: 2rem 0 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.publisher-logo{
+  background:#0a7a3d; /* vert Harmattan */
+  padding: 1rem 1.4rem;
+}
+
+.publisher-logo img{
+  max-width: 220px;
+  height: auto;
+  display: block;
+}
+
+.publisher-name{
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  opacity: 0.85;
+}
+
+/* Bouton achat */
+.buy-link{
+  display: inline-block;
+  margin-top: 1.2rem;
+  padding: 0.9rem 1.8rem;
+  border: 1px solid #f28c28;
+  color: #f28c28;
+  background: transparent;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.buy-link:hover{
+  background: #f28c28;
+  color: #000;
+}
+
+/* Autres points de vente */
+.retailers{
+  margin-top: 2.8rem;
+  max-width: 560px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.98rem;
+  opacity: 0.92;
+}
+
+.retailers h2{
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1.1rem;
+  color: #fff;
+  margin: 0 0 1rem 0;
+  text-align: center;
+}
+
+.retailers ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.retailers li{
+  padding: 0.65rem 0;
+  border-top: 1px solid rgba(255,255,255,0.12);
+  line-height: 1.35;
+}
+
+.retailers li:first-child{
+  border-top: none;
+}
+
+.retailers a{
+  color: #f28c28;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(242,140,40,0.35);
+}
+
+.retailers a:hover{
+  border-bottom-color: #f28c28;
+}
+
+.small-note{
+  margin-top: 1.8rem;
+  font-size: 0.95rem;
+  opacity: 0.85;
+  text-align: center;
+}
 </style>
 </head>
 
 <body>
 <header class="site-header">
 <nav class="nav">
-  <div class="nav-title"><a href="index.html">retour</a></div>
+  <div class="nav-title">
+    <a href="index.html">retour</a>
+  </div>
   <div class="nav-menu">
     <a href="lieux-du-roman.html">les lieux<span>du roman</span></a>
     <a href="personnages.html">les<span>personnages</span></a>
@@ -56,52 +166,58 @@ h1{color:#f28c28;font-family:'Libre Baskerville',serif;margin-bottom:2rem}
 <h1>Acheter le livre</h1>
 
 <div class="buy-box">
-  <p>Le roman est publié par <strong>L’Harmattan</strong> et peut être commandé directement sur le site officiel de l’éditeur.</p>
+  <p>
+    Le roman est publié par <strong>L’Harmattan</strong> et peut être commandé
+    directement sur le site officiel de l’éditeur.
+  </p>
 
   <div class="publisher">
     <div class="publisher-logo">
-      <img src="images/accueil/logo-harmattan.png" alt="Logo des Éditions L’Harmattan">
+      <img src="images/accueil/logo-harmattan.png"
+           alt="Logo des Éditions L’Harmattan"
+           onerror="if(!this.dataset.try){this.dataset.try=1;this.src='/images/accueil/logo-harmattan.png';return;}if(this.dataset.try==1){this.dataset.try=2;this.src='images/accueil/Logo-harmattan.jpg';return;}if(this.dataset.try==2){this.dataset.try=3;this.src='/images/accueil/Logo-harmattan.jpg';return;}">
     </div>
     <div class="publisher-name">Éditions L’Harmattan</div>
   </div>
 
-  <a class="buy-link" href="https://www.editions-harmattan.fr/catalogue/livre/le-testament-dazenor/81789" target="_blank" rel="noopener">
-    Acheter chez l’éditeur
+  <a href="https://www.editions-harmattan.fr/catalogue/livre/le-testament-dazenor/81789"
+     target="_blank"
+     rel="noopener"
+     class="buy-link">
+     Acheter chez l’éditeur
   </a>
 
   <div class="retailers" aria-label="Autres points de vente">
     <h2>Autres points de vente</h2>
-
-    <ul class="retailer-list">
+    <ul>
       <li>
-        <a href="https://www.leslibraires.fr/livre/26250550-le-testament-d-azenor-une-epopee-du-vie-siecle-breton-alain-bertrand-l-harmattan" target="_blank" rel="noopener">
-          <img src="images/accueil/leslibraires.png" alt="Leslibraires.fr">
-          <span>Leslibraires.fr</span>
-        </a>
+        Librairies indépendantes :
+        <a href="https://www.leslibraires.fr/livre/26250550-le-testament-d-azenor-une-epopee-du-vie-siecle-breton-alain-bertrand-l-harmattan"
+           target="_blank" rel="noopener">Leslibraires.fr</a>
       </li>
       <li>
-        <a href="https://www.decitre.fr/livres/le-testament-d-azenor-9782336593012.html" target="_blank" rel="noopener">
-          <img src="images/accueil/decitre.png" alt="Decitre">
-          <span>Decitre</span>
-        </a>
+        Librairie en ligne :
+        <a href="https://www.decitre.fr/livres/le-testament-d-azenor-9782336593012.html"
+           target="_blank" rel="noopener">Decitre</a>
       </li>
       <li>
-        <a href="https://www.cultura.com/p-le-testament-d-azenor-une-epopee-du-vie-siecle-breton-9782336593012.html" target="_blank" rel="noopener">
-          <img src="images/accueil/cultura.png" alt="Cultura">
-          <span>Cultura</span>
-        </a>
+        Cultura :
+        <a href="https://www.cultura.com/p-le-testament-d-azenor-une-epopee-du-vie-siecle-breton-9782336593012.html"
+           target="_blank" rel="noopener">voir la page du livre</a>
       </li>
       <li>
-        <a href="https://www.amazon.fr/dp/2336593017" target="_blank" rel="noopener">
-          <img src="images/accueil/amazon.png" alt="Amazon">
-          <span>Amazon</span>
-        </a>
+        Amazon :
+        <a href="https://www.amazon.fr/dp/2336593017"
+           target="_blank" rel="noopener">voir la page du livre</a>
       </li>
     </ul>
 
-    <p class="small-note">Le livre peut également être commandé dans toutes les librairies.</p>
+    <p class="small-note">
+      Le livre peut également être commandé dans toutes les librairies.
+    </p>
   </div>
 </div>
 </main>
+
 </body>
 </html>
