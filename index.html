@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Azénor – héroïne du roman Le Testament d’Azénor</title>
-<meta name="description" content="Site officiel autour d’Azénor, héroïne du roman historique Le Testament d’Azénor d’Alain Bertrand.">
+<meta name="description" content="De Brest à l’île d’Ouessant, des îles d’Aran aux rivages sauvages de Bréhat, le roman Le Testament d’Azénor plonge dans la légende d’Azénor et de son fils Budoc.">
 <link rel="canonical" href="https://azenor.org/">
 <link rel="icon" href="/favicon.ico">
 
@@ -18,6 +18,8 @@
   --border: rgba(255,255,255,.12);
 }
 *{ box-sizing:border-box; }
+html, body{ height:100%; }
+
 body{
   margin:0;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
@@ -30,9 +32,9 @@ a{ color:inherit; text-decoration:none; }
 
 /* HEADER */
 header{
-  position:sticky;
-  top:0;
-  z-index:10;
+  position:fixed;
+  top:0; left:0; right:0;
+  z-index:1000;
   background:rgba(0,0,0,.65);
   backdrop-filter: blur(6px);
   border-bottom:1px solid rgba(255,255,255,.1);
@@ -44,13 +46,16 @@ header{
   display:flex;
   align-items:center;
   gap:16px;
-  flex-wrap:wrap; /* desktop OK */
+  flex-wrap:nowrap;
 }
 .menu{
   flex:1;
   display:flex;
   gap:10px;
-  flex-wrap:wrap; /* desktop OK */
+  flex-wrap:nowrap;
+  overflow-x:auto;
+  -webkit-overflow-scrolling:touch;
+  white-space:nowrap;
 }
 .menu a{
   color:var(--accent);
@@ -58,8 +63,12 @@ header{
   border-radius:999px;
   border:1px solid rgba(255,255,255,.15);
   background:rgba(0,0,0,.25);
+  flex:0 0 auto;
 }
-.lang{ display:flex; gap:8px; flex:0 0 auto; }
+.lang{
+  flex:0 0 auto;
+  display:flex;
+}
 .lang a{
   width:34px;
   height:24px;
@@ -71,27 +80,10 @@ header{
   background:rgba(0,0,0,.25);
 }
 
-/* MENU MOBILE — SCROLL HORIZONTAL (iPhone) */
-@media (max-width:768px){
-  header .nav{
-    flex-wrap:nowrap;           /* empêche la casse des lignes */
-    gap:10px;
-  }
-  header .nav nav.menu{
-    flex:1 1 auto;
-    flex-wrap:nowrap !important;
-    overflow-x:auto;
-    overflow-y:hidden;
-    -webkit-overflow-scrolling:touch;
-    white-space:nowrap;
-  }
-  header .nav nav.menu a{
-    flex:0 0 auto;
-    white-space:nowrap;
-  }
-  header .nav .lang{
-    flex:0 0 auto;
-  }
+/* reserve space for fixed header/footer */
+body{
+  padding-top:74px;
+  padding-bottom:110px;
 }
 
 /* MAIN */
@@ -104,9 +96,10 @@ main{
   display:grid;
   grid-template-columns:480px 1fr;
   gap:32px;
-  align-items:start;
 }
-@media(max-width:980px){ .hero{ grid-template-columns:1fr; } }
+@media(max-width:980px){
+  .hero{ grid-template-columns:1fr; }
+}
 
 .cover{
   width:100%;
@@ -115,6 +108,7 @@ main{
   margin:auto;
   box-shadow:0 16px 46px rgba(0,0,0,.60);
 }
+
 .card{
   background:var(--card);
   border:1px solid var(--border);
@@ -122,17 +116,21 @@ main{
   padding:18px;
   box-shadow:0 12px 30px rgba(0,0,0,.35);
 }
+
 h1{
-  margin:0 0 10px;
+  margin:0 0 8px;
   color:var(--accent);
   font-size: clamp(1.6rem, 2.2vw, 2.1rem);
 }
+
+/* SEO subtitle (ONE single sentence, different from H1) */
 .seo-subtitle{
-  margin:0 0 14px;
+  margin:0 0 16px;
   color:var(--muted);
   font-size:1.02rem;
   line-height:1.6;
 }
+
 .intro{
   line-height:1.75;
   color:var(--muted);
@@ -140,11 +138,13 @@ h1{
   white-space: pre-wrap;
 }
 
-/* FOOTER (desktop: en bas de page) */
+/* FOOTER fixed bottom */
 .site-footer{
+  position:fixed;
+  left:0; right:0; bottom:0;
   background:#000;
-  margin-top:4rem;
-  padding:1.6rem 0;
+  padding:1.4rem 0;
+  z-index:9999;
 }
 .footer-inner{
   max-width:1200px;
@@ -176,21 +176,6 @@ h1{
   border-radius:3px;
   box-shadow:0 2px 4px rgba(0,0,0,.6);
 }
-
-/* FOOTER FIXE SUR iPHONE (et on réserve la place) */
-@media (max-width:768px){
-  .site-footer{
-    position:fixed;
-    left:0;
-    right:0;
-    bottom:0;
-    margin-top:0;
-    z-index:9999;
-  }
-  body{
-    padding-bottom: 110px; /* évite que le contenu passe sous le footer */
-  }
-}
 </style>
 </head>
 
@@ -207,53 +192,49 @@ h1{
       <a href="making-off.html">making of</a>
       <a href="contact.html">Contact</a>
     </nav>
-    <div class="lang" aria-label="Choix de la langue">
+    <div class="lang">
       <a href="en/index.html" title="English version">🇬🇧</a>
     </div>
   </div>
 </header>
 
 <main>
-  <section class="hero">
-    <div>
-      <img class="cover" src="images/accueil/couverture.jpg" alt="Couverture du roman Le Testament d’Azénor">
-    </div>
+<section class="hero">
+  <div>
+    <img class="cover" src="images/accueil/couverture.jpg" alt="Couverture du roman Le Testament d’Azénor">
+  </div>
 
-    <div class="card">
-      <h1>Azénor – héroïne du roman <em>Le Testament d’Azénor</em></h1>
-      <p class="seo-subtitle">Azénor – héroïne du roman <em>Le Testament d’Azénor</em></p>
+  <div class="card">
+    <h1>Azénor – héroïne du roman <em>Le Testament d’Azénor</em></h1>
 
-      <div class="intro">De Brest à l’île d’Ouessant, des îles d’Aran aux rivages sauvages de Bréhat, ce roman plonge dans la fabuleuse légende d’Azénor et de son fils Budoc, entre histoire et mystère.
+    <p class="seo-subtitle">
+      Roman historique breton du VIᵉ siècle, entre Irlande et Armorique, mêlant légende d’Azénor, manuscrit interdit et intrigues monastiques.
+    </p>
+
+    <div class="intro">De Brest à l’île d’Ouessant, des îles d’Aran aux rivages sauvages de Bréhat, ce roman plonge dans la fabuleuse légende d’Azénor et de son fils Budoc, entre histoire et mystère.
 
 Accusée d’adultère, la jeune princesse Azénor est condamnée à dériver sur l’océan. Son fils Budoc naît au cœur des îles d’Aran et grandit sous la protection de saint Enda, dans une école monastique où se forgent les grands esprits de son temps. Devenu moine à son tour, il ramènera en Armorique l’héritage de son maître et fondera sur l’île de Lavrec une école où s’épanouiront savoir et foi.
 
 Mais au centre de cette fresque historique se trouve un manuscrit, rédigé par Tadhgán l’Irlandais, ancien druide devenu moine et précepteur d’Azénor. Un texte qui renferme une vérité capable de bouleverser les certitudes et d’attiser les convoitises. Trahisons, rivalités et luttes d’influence s’entrelacent autour de ces pages interdites, tandis que l’avenir de la Bretagne et de l’Irlande se dessine dans l’ombre des monastères et des prophéties.
 
 S’appuyant sur les Vies des Saints de Bretagne et d’Irlande, ce roman historique, aux allures de polar médiéval, mêle réalité et légende dans une épopée où le savoir peut être un héritage… ou une malédiction.</div>
-    </div>
-  </section>
+  </div>
+</section>
 </main>
 
 <footer class="site-footer">
   <div class="footer-inner">
     <div class="social-icons">
       <a class="icon" href="https://www.linkedin.com/sharing/share-offsite/?url=https://azenor.org/" target="_blank" rel="noopener" title="LinkedIn">
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.11 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8h4V24h-4V8zM8 8h3.8v2.2h.1c.5-1 1.8-2.2 3.8-2.2 4 0 4.7 2.6 4.7 6V24h-4v-7.8c0-1.9 0-4.2-2.6-4.2s-3 2-3 4v8H8V8z"></path>
-        </svg>
+        <svg viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.11 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8h4V24h-4V8zM8 8h3.8v2.2h.1c.5-1 1.8-2.2 3.8-2.2 4 0 4.7 2.6 4.7 6V24h-4v-7.8c0-1.9 0-4.2-2.6-4.2s-3 2-3 4v8H8V8z"/></svg>
       </a>
       <a class="icon" href="https://twitter.com/intent/tweet?url=https://azenor.org/" target="_blank" rel="noopener" title="X">
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M18.24 2H21l-6.6 7.55L22 22h-6.6l-4.7-6.1L5.4 22H2.6l7.1-8.1L2 2h6.7l4.3 5.6L18.24 2z"></path>
-        </svg>
+        <svg viewBox="0 0 24 24"><path d="M18.24 2H21l-6.6 7.55L22 22h-6.6l-4.7-6.1L5.4 22H2.6l7.1-8.1L2 2h6.7l4.3 5.6L18.24 2z"/></svg>
       </a>
       <a class="icon" href="https://www.facebook.com/sharer/sharer.php?u=https://azenor.org/" target="_blank" rel="noopener" title="Facebook">
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9v-2.9h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.8-1.6 1.5v1.8h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z"></path>
-        </svg>
+        <svg viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9v-2.9h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.8-1.6 1.5v1.8h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z"/></svg>
       </a>
     </div>
-
     <a class="buy-btn" href="achat.html">Acheter le livre</a>
   </div>
 </footer>
