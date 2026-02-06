@@ -1,20 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <script>
-(function () {
-  var CANON = "https://azenor.org";
-  var hostOk = (location.host === "azenor.org");
-  var protoOk = (location.protocol === "https:");
-  var isHomeAlias = /\/(index(\.html)?|index_[^\/]+\.html)$/i.test(location.pathname);
-
-  if (!protoOk || !hostOk || isHomeAlias) {
-    var targetPath = isHomeAlias ? "/" : location.pathname;
-    var target = CANON + targetPath + location.search + location.hash;
-    location.replace(target);
-  }
-})();
-</script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -33,18 +19,24 @@
       color:#eee;
     }
     header{
-      padding:16px;
       background:#000;
       border-bottom:1px solid #333;
     }
-    header a{
+    nav{
+      max-width:1000px;
+      margin:auto;
+      padding:14px 20px;
+      display:flex;
+      gap:16px;
+      flex-wrap:wrap;
+    }
+    nav a{
       color:#f28c28;
       text-decoration:none;
-      font-weight:700;
-      margin-right:12px;
+      font-weight:600;
     }
     main{
-      max-width:960px;
+      max-width:1000px;
       margin:40px auto;
       padding:0 20px;
     }
@@ -54,23 +46,16 @@
     }
     .hero{
       display:grid;
-      grid-template-columns:300px 1fr;
+      grid-template-columns:320px 1fr;
       gap:32px;
+      align-items:start;
     }
-    @media(max-width:700px){
+    @media(max-width:720px){
       .hero{ grid-template-columns:1fr; }
     }
     img{
       width:100%;
-      max-width:300px;
       display:block;
-    }
-    footer{
-      margin-top:60px;
-      padding:20px;
-      text-align:center;
-      color:#888;
-      border-top:1px solid #333;
     }
     .btn{
       display:inline-block;
@@ -81,17 +66,26 @@
       text-decoration:none;
       border-radius:4px;
     }
+    footer{
+      margin-top:60px;
+      padding:20px;
+      text-align:center;
+      color:#888;
+      border-top:1px solid #333;
+    }
   </style>
 </head>
 
 <body>
 
 <header>
-  <a href="/">Azénor</a>
-  <a href="personnages.html">Personnages</a>
-  <a href="veritable-legende-azenor.html">La légende</a>
-  <a href="making-off.html">Making of</a>
-  <a href="achat.html">Acheter</a>
+  <nav>
+    <a href="./">Accueil</a>
+    <a href="personnages.html">Personnages</a>
+    <a href="veritable-legende-azenor.html">La légende</a>
+    <a href="making-off.html">Making of</a>
+    <a href="achat.html">Acheter</a>
+  </nav>
 </header>
 
 <main>
