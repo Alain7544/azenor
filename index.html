@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Azénor – héroïne du roman Le Testament d’Azénor</title>
-  <meta name="description" content="Site officiel autour d’Azénor, héroïne du roman historique Le Testament d’Azénor d’Alain Bertrand.">
+  <meta name="description"
+        content="Site officiel autour d’Azénor, héroïne du roman historique Le Testament d’Azénor d’Alain Bertrand.">
 
   <link rel="canonical" href="https://azenor.org/">
   <link rel="icon" href="/favicon.ico">
@@ -14,22 +15,22 @@
   <meta property="og:locale" content="fr_FR">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Azénor – Le Testament d’Azénor">
-  <meta property="og:description" content="Site officiel autour d’Azénor, héroïne du roman historique Le Testament d’Azénor d’Alain Bertrand.">
+  <meta property="og:description"
+        content="Site officiel autour d’Azénor, héroïne du roman historique Le Testament d’Azénor d’Alain Bertrand.">
   <meta property="og:url" content="https://azenor.org/">
   <meta property="og:site_name" content="Le Testament d’Azénor">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Azénor – Le Testament d’Azénor">
-  <meta name="twitter:description" content="Site officiel autour d’Azénor, héroïne du roman historique Le Testament d’Azénor d’Alain Bertrand.">
+  <meta name="twitter:description"
+        content="Site officiel autour d’Azénor, héroïne du roman historique Le Testament d’Azénor d’Alain Bertrand.">
 
   <style>
     :root{
       --accent:#f28c28;
       --fg:#f2f2f2;
       --muted:#cccccc;
-      --card: rgba(0,0,0,.52);
-      --border: rgba(255,255,255,.12);
     }
     *{ box-sizing:border-box; }
     body{
@@ -72,7 +73,6 @@
       border:1px solid rgba(255,255,255,.15);
       background:rgba(0,0,0,.25);
     }
-    .menu a:hover{ border-color:var(--accent); }
 
     main{
       max-width:1200px;
@@ -87,21 +87,15 @@
     }
     @media(max-width:980px){ .hero{ grid-template-columns:1fr; } }
 
-    .card{
-      background:var(--card);
-      border:1px solid var(--border);
-      border-radius:14px;
-      padding:18px;
-      box-shadow:0 12px 30px rgba(0,0,0,.35);
-    }
+    /* === COUVERTURE : AUCUN CADRE, AUCUN ARRONDI === */
     .cover{
       width:100%;
       max-width:480px;
       display:block;
       margin:auto;
-      border-radius:12px;
       box-shadow:0 16px 46px rgba(0,0,0,.60);
     }
+
     h1{
       margin:0 0 12px;
       color:var(--accent);
@@ -110,13 +104,47 @@
     .intro{
       line-height:1.75;
       color:var(--muted);
-      font-size: 1.02rem;
+      font-size:1.02rem;
       white-space: pre-wrap;
     }
-    footer{
-      text-align:center;
-      padding:18px 18px 36px;
-      color:rgba(255,255,255,.55);
+
+    /* === FOOTER ORIGINAL === */
+    footer.site-footer{
+      background:#000;
+      margin-top:4rem;
+      padding:1.6rem 0;
+    }
+    .footer-inner{
+      max-width:1200px;
+      margin:0 auto;
+      padding:0 1.5rem;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+    .social-icons .icon{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      width:32px;
+      height:32px;
+      border-radius:50%;
+      border:1px solid #f28c28;
+      margin-right:0.5rem;
+    }
+    .social-icons svg{
+      width:16px;
+      height:16px;
+      fill:#f28c28;
+    }
+    .buy-btn{
+      background:linear-gradient(#3a3a3a, #1f1f1f);
+      color:#f28c28;
+      padding:0.55rem 1.2rem;
+      text-decoration:none;
+      font-weight:500;
+      border-radius:3px;
+      box-shadow:0 2px 4px rgba(0,0,0,.6);
     }
   </style>
 </head>
@@ -125,7 +153,7 @@
 
 <header>
   <div class="nav">
-    <nav class="menu" aria-label="Navigation principale">
+    <nav class="menu">
       <a href="./">Accueil</a>
       <a href="lieux-du-roman.html">Lieux</a>
       <a href="personnages.html">Personnages</a>
@@ -140,13 +168,13 @@
 
 <main>
   <section class="hero">
-    <div class="card">
+    <div>
       <img class="cover"
            src="images/accueil/couverture.jpg"
-           alt="Couverture du livre Le Testament d’Azénor">
+           alt="Couverture du roman Le Testament d’Azénor">
     </div>
 
-    <div class="card">
+    <div>
       <h1>Azénor – héroïne du roman <em>Le Testament d’Azénor</em></h1>
 
       <div class="intro">
@@ -156,16 +184,21 @@ De Brest à l’île d’Ouessant, des îles d’Aran aux rivages sauvages de Br
 
 Accusée d’adultère, la jeune princesse Azénor est condamnée à dériver sur l’océan. Son fils Budoc naît au cœur des îles d’Aran et grandit sous la protection de saint Enda, dans une école monastique où se forgent les grands esprits de son temps. Devenu moine à son tour, il ramènera en Armorique l’héritage de son maître et fondera sur l’île de Lavrec une école où s’épanouiront savoir et foi.
 
-Mais au centre de cette fresque historique se trouve un manuscrit, rédigé par Tadhgán l’Irlandais, ancien druide devenu moine et précepteur d’Azénor. Un texte qui renferme une vérité capable de bouleverser les certitudes et d’attiser les convoitises. Trahisons, rivalités et luttes d’influence s’entrelacent autour de ces pages interdites, tandis que l’avenir de la Bretagne et de l’Irlande se dessine dans l’ombre des monastères et des prophéties.
-
-S’appuyant sur les Vies des Saints de Bretagne et d’Irlande, ce roman historique, aux allures de polar médiéval, mêle réalité et légende dans une épopée où le savoir peut être un héritage… ou une malédiction.
+Mais au centre de cette fresque historique se trouve un manuscrit, rédigé par Tadhgán l’Irlandais, ancien druide devenu moine et précepteur d’Azénor. Un texte qui renferme une vérité capable de bouleverser les certitudes et d’attiser les convoitises.
       </div>
     </div>
   </section>
 </main>
 
-<footer>
-  © Alain Bertrand – Le Testament d’Azénor
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="social-icons">
+      <a class="icon" href="https://www.linkedin.com/sharing/share-offsite/?url=https://azenor.org/" target="_blank" rel="noopener" title="LinkedIn">
+        <svg viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.11 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8h4V24h-4V8zM8 8h3.8v2.2h.1c.5-1 1.8-2.2 3.8-2.2 4 0 4.7 2.6 4.7 6V24h-4v-7.8c0-1.9 0-4.2-2.6-4.2s-3 2-3 4v8H8V8z"/></svg>
+      </a>
+    </div>
+    <a class="buy-btn" href="achat.html">Acheter le livre</a>
+  </div>
 </footer>
 
 </body>
