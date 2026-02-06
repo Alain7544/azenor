@@ -1,6 +1,20 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+  <script>
+(function () {
+  var CANON = "https://azenor.org";
+  var hostOk = (location.host === "azenor.org");
+  var protoOk = (location.protocol === "https:");
+  var isHomeAlias = /\/(index(\.html)?|index_[^\/]+\.html)$/i.test(location.pathname);
+
+  if (!protoOk || !hostOk || isHomeAlias) {
+    var targetPath = isHomeAlias ? "/" : location.pathname;
+    var target = CANON + targetPath + location.search + location.hash;
+    location.replace(target);
+  }
+})();
+</script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
