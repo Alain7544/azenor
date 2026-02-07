@@ -1,154 +1,111 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html lang="en" translate="no">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="google" content="notranslate"/>
+<meta charset="utf-8"/>
+<meta http-equiv="Content-Language" content="en"/>
+<title>Le Testament d’Azénor | Official site</title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 
-<title>Azenor – heroine of the novel The Testament of Azenor</title>
-<meta name="description" content="A 6th-century historical novel set between Ireland and Brittany, inspired by the legend of Azenor and her son Budoc.">
-<link rel="canonical" href="https://azenor.org/en/">
-<link rel="icon" href="/favicon.ico">
-
+  <meta name="description" content="Official website for the novel Le Testament d’Azénor: world, characters, places, making-of, and publication info.">
+  <link rel="canonical" href="https://azenor.org/en/">
+<link rel="alternate" hreflang="fr" href="https://azenor.org/">
+<link rel="alternate" hreflang="en" href="https://azenor.org/en/">
+<link rel="alternate" hreflang="x-default" href="https://azenor.org/">
+<meta property="og:url" content="https://azenor.org/en/">
+<meta property="og:locale" content="en_GB">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Le Testament d’Azénor | Official site">
+  <meta property="og:description" content="Official website for the novel Le Testament d’Azénor: world, characters, places, making-of, and publication info.">
+ <meta property="og:url" content="https://azenor.org/en/">
+  <meta property="og:site_name" content="Le Testament d’Azénor">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Le Testament d’Azénor | Official site">
+  <meta name="twitter:description" content="Official website for the novel Le Testament d’Azénor: world, characters, places, making-of, and publication info.">
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400&700&amp&display=swap" rel="stylesheet"/>
+<link href="../css/style.css" rel="stylesheet"/>
 <style>
-:root{
-  --accent:#f28c28;
-  --fg:#f2f2f2;
-  --muted:#cccccc;
-  --card: rgba(0,0,0,.52);
-  --border: rgba(255,255,255,.12);
+/* ===== INTRO THÉÂTRALE (RIDEAU) ===== */
+.intro-stage {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  overflow: hidden;
 }
-*{ box-sizing:border-box; }
-html, body{ height:100%; }
-
-body{
-  margin:0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
-  color:var(--fg);
-  background:
-    linear-gradient(rgba(0,0,0,.35), rgba(0,0,0,.55)),
-    url("../images/accueil/fond-accueil.jpg") center / cover no-repeat fixed;
-}
-
-/* HEADER */
-header{
-  position:fixed;
-  top:0; left:0; right:0;
-  z-index:1000;
-  background:rgba(0,0,0,.65);
-  backdrop-filter: blur(6px);
-  border-bottom:1px solid rgba(255,255,255,.1);
-}
-.nav{
-  max-width:1200px;
-  margin:auto;
-  padding:14px 18px;
-  display:flex;
-  align-items:center;
-  gap:16px;
-  flex-wrap:nowrap;
-  width:100%;
-}
-.menu{
-  flex:1;
-  display:flex;
-  gap:10px;
-  flex-wrap:nowrap;
-  overflow-x:auto;
-  -webkit-overflow-scrolling:touch;
-  white-space:nowrap;
-  min-width:0;
-}
-.menu a{
-  color:var(--accent);
-  padding:6px 10px;
-  border-radius:999px;
-  border:1px solid rgba(255,255,255,.15);
-  background:rgba(0,0,0,.25);
-  flex:0 0 auto;
-}
-.lang{
-  flex:0 0 auto;
-}
-.lang a{
-  width:34px;
-  height:24px;
+.intro-text {
+  position:absolute;
+  inset:0;
   display:flex;
   align-items:center;
   justify-content:center;
-  border-radius:6px;
-  border:1px solid rgba(255,255,255,.25);
-  background:rgba(0,0,0,.25);
+  text-align:center;
+  color:#f28c28;
+  font-family:'Libre Baskerville', serif;
+  padding:2rem;
+  z-index:3;
 }
-
-/* reserve space for fixed header/footer */
-body{
-  padding-top:74px;
-  padding-bottom:110px;
-}
-
-/* MAIN */
-main{
-  max-width:1200px;
-  margin:auto;
-  padding:36px 18px 44px;
-}
-.hero{
-  display:grid;
-  grid-template-columns:480px 1fr;
-  gap:32px;
-}
-@media(max-width:980px){
-  .hero{ grid-template-columns:1fr; }
-}
-.cover{
-  width:100%;
-  max-width:480px;
-  display:block;
-  margin:auto;
-  box-shadow:0 16px 46px rgba(0,0,0,.60);
-}
-.card{
-  background:var(--card);
-  border:1px solid var(--border);
-  border-radius:14px;
-  padding:18px;
-  box-shadow:0 12px 30px rgba(0,0,0,.35);
-}
-h1{
-  margin:0 0 10px;
-  color:var(--accent);
-  font-size: clamp(1.6rem, 2.2vw, 2.1rem);
-}
-.seo-subtitle{
-  margin:0 0 16px;
-  color:var(--muted);
-  font-size:1.02rem;
+.intro-text blockquote {
+  font-size:1.7rem;
   line-height:1.6;
+  max-width:900px;
 }
-.intro{
-  line-height:1.75;
-  color:var(--muted);
-  font-size:1.02rem;
-  white-space: pre-wrap;
+.intro-text footer {
+  margin-top:1.5rem;
+  font-size:1.1rem;
+  font-style:italic;
 }
-
-/* FOOTER fixed bottom */
-.site-footer{
-  position:fixed;
-  left:0; right:0; bottom:0;
+.curtain {
+  position:absolute;
+  top:0;
+  width:50%;
+  height:100%;
   background:#000;
-  padding:1.4rem 0;
-  z-index:9999;
+  z-index:2;
+  transition:transform 1.6s ease-in-out;
 }
-.footer-inner{
+.curtain.left{left:0;}
+.curtain.right{right:0;}
+.intro-stage.open .curtain.left{transform:translateX(-100%);}
+.intro-stage.open .curtain.right{transform:translateX(100%);}
+.intro-stage.open .intro-text{opacity:0; transition:opacity .6s ease;}
+</style>
+<style>
+/* ===== FOOTER (référence) ===== */
+.site-footer{
+  background:#000;
+  margin-top:4rem;
+  padding:1.6rem 0;
+}
+.site-footer .footer-inner{
   max-width:1200px;
   margin:0 auto;
   padding:0 1.5rem;
   display:flex;
   justify-content:space-between;
   align-items:center;
-  gap:16px;
+  gap:1.5rem;
   flex-wrap:wrap;
+}
+.footer-left{
+  display:flex;
+  align-items:center;
+  gap:1.2rem;
+}
+.like-btn{
+  background:none;
+  border:1px solid #f28c28;
+  color:#f28c28;
+  padding:0.35rem 0.7rem;
+  cursor:pointer;
+  font-size:0.9rem;
+}
+.social-icons{
+  display:flex;
+  align-items:center;
+  gap:0.6rem;
 }
 .social-icons .icon{
   display:inline-flex;
@@ -158,83 +115,239 @@ h1{
   height:32px;
   border-radius:50%;
   border:1px solid #f28c28;
-  margin-right:0.5rem;
+  text-decoration:none;
 }
 .social-icons svg{
   width:16px;
   height:16px;
   fill:#f28c28;
+  display:block;
 }
-.buy-btn{
+.footer-right .buy-btn{
   background:linear-gradient(#3a3a3a, #1f1f1f);
   color:#f28c28;
   padding:0.55rem 1.2rem;
   text-decoration:none;
   font-weight:500;
   border-radius:3px;
-  box-shadow:0 2px 4px rgba(0,0,0,.6);
+  box-shadow:0 2px 4px rgba(0,0,0,0.6);
 }
 </style>
+<style>
+/* --- SUPPRESSION ESPACE NOIR ENTRE IMAGE ET FOOTER --- */
+.hero{
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+.site-footer{
+  margin-top: 0 !important;
+}
+</style>
+<style>
+/* === INDEX : couverture très grande (style affiche) === */
+.hero .hero-grid{
+  align-items: center;
+}
+
+.hero .cover{
+  flex: 0 0 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.hero .cover img{
+  width: 100%;
+  max-width: 560px;
+  height: auto;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+}
+
+@media (max-width: 768px){
+  .hero .cover img{
+    max-width: 360px;
+  }
+}
+</style>
+<style>.nav-lang{display:flex;align-items:center;gap:.45rem;white-space:nowrap}
+.nav-lang a{text-decoration:none;font-size:1.1rem}
+.nav-lang span{opacity:.65}
+</style>
+<style>
+/* === INDEX EN: title moved above text + iPhone-friendly fixed footer === */
+.hero-title{
+  margin: 0 0 1rem 0;
+  font-family: 'Libre Baskerville', serif;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 1.15;
+  color: #f28c28;
+  text-align: left;
+}
+@media (max-width: 768px){
+  .hero-title{ font-size: 1.7rem; text-align:center; }
+}
+
+/* Make page scrollable with a fixed footer */
+:root{ --footer-h: 110px; }
+@media (max-width: 768px){ :root{ --footer-h: 130px; } }
+
+body{
+  padding-bottom: var(--footer-h);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.site-footer{
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+}
+</style>
+<style>
+
+/* === PATCH iPhone : débloquer le haut de la couverture === */
+/* iOS Safari + header/footer fixes => il faut réserver l'espace */
+:root{ --header-h: 90px; }
+
+@media (max-width: 768px){
+  :root{ --header-h: 100px; }
+  .hero{ padding-top: var(--header-h); }
+}
+
+/* garantir le scroll vertical réel */
+html, body{
+  height: auto;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+</style>
+<style>
+
+/* === PATCH iPhone : garder le header fixe (sans recasser le scroll) === */
+@media (max-width: 768px){
+  header{
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 9999;
+  }
+  /* si le footer est fixed aussi, on réserve l'espace en bas */
+  body{ padding-top: var(--header-h); padding-bottom: 90px; }
+}
+
+</style>
+<style>
+
+/* === FIX iPhone: header + footer vraiment fixes, sans bloquer le scroll === */
+/* Override en !important car style.css peut imposer overflow/positions */
+:root{
+  --header-h: 90px;
+  --footer-h: 110px;
+}
+@media (max-width: 768px){
+  :root{
+    --header-h: 100px;
+    --footer-h: 130px;
+  }
+}
+
+/* Garantir un scroll vertical normal sur iOS */
+html, body{
+  height: auto !important;
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Header fixé */
+header.site-header{
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  width: 100% !important;
+  z-index: 9999 !important;
+}
+
+/* Footer fixé */
+footer.site-footer{
+  position: fixed !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  width: 100% !important;
+  z-index: 9998 !important;
+}
+
+/* Réserver l'espace du header et du footer pour que le contenu ne soit pas coupé */
+body{
+  padding-top: var(--header-h) !important;
+  padding-bottom: var(--footer-h) !important;
+}
+
+/* La section hero n'a plus besoin d'un padding-top spécifique */
+.hero{
+  padding-top: 0 !important;
+}
+
+</style>
 </head>
-
 <body>
-
-<header>
-  <div class="nav">
-    <nav class="menu" aria-label="Navigation">
-      <a href="places.html">Places</a>
-      <a href="characters.html">Characters</a>
-      <a href="book-of-conquests.html">Conquests</a>
-      <a href="true-legend-of-azenor.html">The legend</a>
-      <a href="bibliography.html">Bibliography</a>
-      <a href="making-of.html">Making of</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-    <div class="lang">
-      <a href="../index.html" title="French version">🇫🇷</a>
-    </div>
-  </div>
+<!-- INTRO THÉÂTRALE -->
+<!-- CONTENU DE L’INDEX -->
+<header class="site-header">
+<nav class="nav"><div aria-label="Language switch" class="nav-lang"><a href="../index.html" title="Version française" lang="fr" hreflang="fr">🇫🇷</a><span> | </span><a href="index.html" title="English version">🇬🇧</a></div>
+<div class="nav-menu"><a href="index.html">home</a><a href="personnages.html">characters</a><a href="making-off.html">making of</a><a href="rights.html">rights &amp; translation</a><a href="contact.html">contact</a></div>
+</nav>
 </header>
-
-<main>
 <section class="hero">
-  <div>
-    <img class="cover" src="../images/accueil/couverture.jpg" alt="Cover of The Testament of Azenor">
-  </div>
-
-  <div class="card">
-    <h1>Azenor – heroine of the novel <em>The Testament of Azenor</em></h1>
-    <p class="seo-subtitle">
-      A 6th-century historical novel set between Ireland and Brittany, blending legend, forbidden manuscript and monastic intrigue.
-    </p>
-
-    <div class="intro">From Brest to the island of Ushant, from the Aran Islands to the wild shores of Bréhat, this novel plunges into the fabulous legend of Azenor and her son Budoc, between history and mystery.
-
-Accused of adultery, the young princess Azenor is sentenced to drift on the ocean. Her son Budoc is born in the heart of the Aran Islands and grows up under the protection of Saint Enda, in a monastic school where the great minds of his time are formed. Becoming a monk in turn, he will bring back to Armorica the legacy of his master and found on the island of Lavrec a school where knowledge and faith will flourish.
-
-But at the heart of this historical fresco lies a manuscript, written by Tadhgán the Irishman, a former druid turned monk and Azenor’s tutor. A text that contains a truth capable of overturning certainties and stirring covetousness. Betrayals, rivalries and power struggles intertwine around these forbidden pages, while the future of Brittany and Ireland takes shape in the shadows of monasteries and prophecies.
-
-Drawing on the Lives of the Saints of Brittany and Ireland, this historical novel—with the feel of a medieval thriller—blends reality and legend into an epic in which knowledge can be a legacy… or a curse.</div>
-  </div>
+<div class="hero-content hero-grid">
+<div class="cover">
+<img alt="Couverture du livre Le Testament d’Azénor" src="../images/accueil/couverture.jpg"/>
+</div>
+<div class="hero-text">
+<h1 class="hero-title">The Testament of Azénor</h1>
+<p>From Brest to the island of Ouessant, from the Aran Islands to the wild shores of Bréhat, this novel plunges into the remarkable legend of Azénor and her son Budoc—at the crossroads of history and mystery.</p>
+<p>Accused of adultery, the young princess Azénor is condemned to drift on the ocean. Her son Budoc is born among the Aran Islands and grows up under the protection of Saint Enda, in a monastic school where the great minds of the age are shaped.</p>
+<p>At the heart of this fresco lies a manuscript written by Tadhgán the Irishman, a former druid who became a monk—an unsettling text, capable of overturning certainties and stirring dangerous ambitions.</p>
+<p>Drawing on the Lives of the Saints of Brittany and Ireland, this historical novel weaves fact and legend into an epic where knowledge can be an inheritance… or a curse.</p>
+</div>
+</div>
 </section>
-</main>
-
 <footer class="site-footer">
-  <div class="footer-inner">
-    <div class="social-icons">
-      <a class="icon" href="https://www.linkedin.com/sharing/share-offsite/?url=https://azenor.org/en/" target="_blank" rel="noopener" title="LinkedIn">
-        <svg viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.11 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8h4V24h-4V8zM8 8h3.8v2.2h.1c.5-1 1.8-2.2 3.8-2.2 4 0 4.7 2.6 4.7 6V24h-4v-7.8c0-1.9 0-4.2-2.6-4.2s-3 2-3 4v8H8V8z"/></svg>
-      </a>
-      <a class="icon" href="https://twitter.com/intent/tweet?url=https://azenor.org/en/" target="_blank" rel="noopener" title="X">
-        <svg viewBox="0 0 24 24"><path d="M18.24 2H21l-6.6 7.55L22 22h-6.6l-4.7-6.1L5.4 22H2.6l7.1-8.1L2 2h6.7l4.3 5.6L18.24 2z"/></svg>
-      </a>
-      <a class="icon" href="https://www.facebook.com/sharer/sharer.php?u=https://azenor.org/en/" target="_blank" rel="noopener" title="Facebook">
-        <svg viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9v-2.9h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.8-1.6 1.5v1.8h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z"/></svg>
-      </a>
-    </div>
-    <a class="buy-btn" href="../achat.html">Buy the book</a>
-  </div>
+<div class="footer-inner">
+<div class="footer-left">
+<button class="like-btn">❤</button>
+<div class="social-icons">
+<!-- LinkedIn -->
+<a class="icon" href="https://www.linkedin.com/sharing/share-offsite/?url=https://azenor.netlify.app/contact" rel="noopener" target="_blank" title="LinkedIn">
+<svg aria-hidden="true" viewbox="0 0 24 24">
+<path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.11 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8h4V24h-4V8zM8 8h3.8v2.2h.1c.5-1 1.8-2.2 3.8-2.2 4 0 4.7 2.6 4.7 6V24h-4v-7.8c0-1.9 0-4.2-2.6-4.2s-3 2-3 4v8H8V8z"></path>
+</svg>
+</a>
+<!-- X -->
+<a class="icon" href="https://twitter.com/intent/tweet?url=https://azenor.netlify.app/contact" rel="noopener" target="_blank" title="X">
+<svg aria-hidden="true" viewbox="0 0 24 24">
+<path d="M18.24 2H21l-6.6 7.55L22 22h-6.6l-4.7-6.1L5.4 22H2.6l7.1-8.1L2 2h6.7l4.3 5.6L18.24 2z"></path>
+</svg>
+</a>
+<!-- Facebook -->
+<a class="icon" href="https://www.facebook.com/sharer/sharer.php?u=https://azenor.netlify.app/contact" rel="noopener" target="_blank" title="Facebook">
+<svg aria-hidden="true" viewbox="0 0 24 24">
+<path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9v-2.9h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.8-1.6 1.5v1.8h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z"></path>
+</svg>
+</a>
+</div>
+</div>
+<div class="footer-right">
+<a class="buy-btn" href="../achat.html">Buy the book</a>
+</div>
+</div>
 </footer>
-
 </body>
 </html>
