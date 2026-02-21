@@ -296,9 +296,10 @@ main{
 <main>
 <section class="character-grid">
 <div class="portrait">
-<img 
-  src="images/personnages/azenor-heroine-bretagne-VIe-siecle.jpg"
+<img
+  src="/images/personnages/azenor-heroine-bretagne-VIe-siecle.jpg"
   alt="Azénor, héroïne bretonne du VIe siècle dans le roman Le Testament d’Azénor"
+/>
 />
 </div>
 <div class="extrait excerpt">
