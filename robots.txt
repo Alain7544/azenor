@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://alain7544.neocities.org/sitemap.xml
+Sitemap: https://alain7544.azenor.org/sitemap.xml
