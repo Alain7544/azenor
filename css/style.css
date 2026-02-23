@@ -351,7 +351,15 @@ header.site-header .lang a{
     white-space: nowrap;
   }
 }
-
+/* Harmonisation des intertitres des pages personnages */
+.character-context h2 {
+    font-family: 'Libre Baskerville', serif;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    letter-spacing: 0.04em;
+    color: #f28c28;
+    margin-top: 3rem;
+}
 
 /* =========================================================
    FOOTER CLEANUP
