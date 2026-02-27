@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <meta name="description" content="Île d’Ouessant (Enez Eusa) — mémoire antique, archéologie et christianisation dans Le Testament d’Azénor.">
 <link rel="canonical" href="https://azenor.org/ouessant.html">
@@ -19,11 +20,11 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-<link href="css/style.css?v=20260115" rel="stylesheet"/>
+<link href="css/style.css?v=20260115" rel="stylesheet">
 
 <style>
 
-/* ===== FOND GLOBAL ===== */
+/* ===== GLOBAL ===== */
 html, body{
   margin:0;
   padding:0;
@@ -53,7 +54,7 @@ html, body{
   display:block;
 }
 
-/* ===== CONTENU ===== */
+/* ===== CONTENT ===== */
 .lieu-content{
   max-width:900px;
   margin:3rem auto 4rem;
@@ -83,17 +84,8 @@ a:hover{
   text-decoration:underline;
 }
 
-/* ===== MOBILE ===== */
-@media screen and (max-width:768px){
-
-  .lieu-title{
-    font-size:1.7rem;
-  }
-
-  .lieu-content{
-    font-size:1rem;
-  }
-
+.lien-sorcieres{
+  font-weight:500;
 }
 
 /* ===== FOOTER ===== */
@@ -102,7 +94,7 @@ a:hover{
   padding:1.6rem 0;
 }
 
-.site-footer .footer-inner{
+.footer-inner{
   max-width:1200px;
   margin:0 auto;
   padding:0 1.5rem;
@@ -126,7 +118,24 @@ a:hover{
   font-size:0.9rem;
 }
 
-.footer-right .buy-btn{
+.social-icons{
+  display:flex;
+  gap:1rem;
+}
+
+.icon svg{
+  width:22px;
+  height:22px;
+  fill:#f28c28;
+  transition:opacity 0.2s ease, transform 0.2s ease;
+}
+
+.icon:hover svg{
+  opacity:0.75;
+  transform:translateY(-2px);
+}
+
+.buy-btn{
   background:linear-gradient(#3a3a3a, #1f1f1f);
   color:#f28c28;
   padding:0.55rem 1.2rem;
@@ -135,15 +144,12 @@ a:hover{
   border-radius:3px;
   box-shadow:0 2px 4px rgba(0,0,0,0.6);
 }
-.lien-sorcieres{
-  color:#f28c28;
-  text-decoration:none;
-  font-weight:500;
+
+@media screen and (max-width:768px){
+  .lieu-title{ font-size:1.7rem; }
+  .lieu-content{ font-size:1rem; }
 }
 
-.lien-sorcieres:hover{
-  text-decoration:underline;
-}
 </style>
 </head>
 
@@ -178,79 +184,55 @@ a:hover{
 <section class="lieu-content">
 
 <h2>Un héritage insulaire ancien</h2>
-
 <p>
-Les <a href="sorcieres.html" class="lien-sorcieres">trois sorcières</a> ne surgissent pas du néant. Leur figure s’inscrit dans une mémoire plus ancienne, évoquée dès l’Antiquité par Pomponius Mela, qui mentionne l’île de Sena, habitée par neuf prêtresses capables de lever les tempêtes et de prédire l’avenir.
-</p>
-
-<p>
-Si l’identification géographique demeure discutée, la tradition bretonne a souvent rapproché cette île des terres du Ponant. Avec le temps, ces prêtresses sont devenues, dans le regard chrétien, des sorcières : non plus gardiennes d’un culte, mais survivances d’un monde ancien.
+Les <a href="sorcieres.html" class="lien-sorcieres">trois sorcières</a> ne surgissent pas du néant...
 </p>
 
 <h2>Archéologie du rivage : les berniques</h2>
-
 <p>
-Les récentes fouilles archéologiques ont mis au jour d’importants amas coquilliers constitués sur plusieurs siècles. Les accumulations de patelles — les berniques — témoignent d’une économie littorale structurée et d’une présence humaine durable.
-</p>
-
-<p>
-Ces dépôts sont de véritables archives du quotidien. Ils rappellent que la survie sur l’île reposait sur une connaissance précise des marées et des ressources marines. Dans le roman, ces berniques deviennent matière symbolique : l’élément le plus humble du rivage se transforme en signe, voire en instrument de violence.
+Les récentes fouilles archéologiques ont mis au jour...
 </p>
 
 <h2>Le passage de Paol Aurélien</h2>
-
 <p>
-La tradition rapporte que Paol Aurélien aborda d’abord l’île avant de rejoindre le continent et de fonder le siège épiscopal du Léon.
-</p>
-
-<p>
-Enez Eusa apparaît ainsi comme un seuil : lieu d’arrivée, de transition et peut-être de confrontation symbolique avant l’installation chrétienne durable.
+La tradition rapporte que Paol Aurélien aborda d’abord l’île...
 </p>
 
 <h2>Résistance et mémoire</h2>
-
 <p>
-Rozenn, Maod et Berc’hed n’incarnent pas un druidisme intact. Elles figurent plutôt la persistance d’un imaginaire insulaire attaché aux cycles naturels et aux forces marines, au moment où l’unification chrétienne tente d’imposer une nouvelle lecture du monde.
-</p>
-
-<p>
-L’île devient un espace liminaire — frontière géographique et spirituelle — où se joue une tension entre continuité et effacement.
+L’île devient un espace liminaire — frontière géographique et spirituelle...
 </p>
 
 </section>
-
 </main>
 
 <footer class="site-footer">
 <div class="footer-inner">
+
 <div class="footer-left">
-  <button class="like-btn">❤</button>
+<button class="like-btn">❤</button>
 
-  <div class="social-icons">
+<div class="social-icons">
 
-    <!-- LinkedIn -->
-    <a class="icon"
-       href="https://www.linkedin.com/sharing/share-offsite/?url=https://azenor.org/ouessant.html"
-       target="_blank"
-       rel="noopener"
-       title="LinkedIn">
-      <!-- ton SVG LinkedIn ici -->
-    </a>
+<a class="icon" href="https://www.linkedin.com/sharing/share-offsite/?url=https://azenor.org/ouessant.html" target="_blank" rel="noopener" title="Partager sur LinkedIn">
+<svg viewBox="0 0 24 24">
+<path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.11 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8h4V24h-4V8zM8 8h3.8v2.2h.1c.5-1 1.8-2.2 3.8-2.2 4 0 4.7 2.6 4.7 6V24h-4v-8.5c0-2-.04-4.5-2.8-4.5-2.8 0-3.2 2.2-3.2 4.3V24h-4V8z"/>
+</svg>
+</a>
 
-    <!-- Facebook -->
-    <a class="icon"
-       href="https://www.facebook.com/sharer/sharer.php?u=https://azenor.org/ouessant.html"
-       target="_blank"
-       rel="noopener"
-       title="Facebook">
-      <!-- ton SVG Facebook ici -->
-    </a>
+<a class="icon" href="https://www.facebook.com/sharer/sharer.php?u=https://azenor.org/ouessant.html" target="_blank" rel="noopener" title="Partager sur Facebook">
+<svg viewBox="0 0 24 24">
+<path d="M22 12a10 10 0 10-11.5 9.9v-7H8v-3h2.5V9.5c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.7-1.6 1.5V12H17l-.4 3h-2.7v7A10 10 0 0022 12z"/>
+</svg>
+</a>
 
-  </div>
 </div>
+</div>
+
 <div class="footer-right">
 <a class="buy-btn" href="achat.html">Acheter le livre</a>
 </div>
+
 </div>
 </footer>
 
