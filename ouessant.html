@@ -4,7 +4,7 @@
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-<meta name="description" content="Île d’Ouessant (Enez Eusa) — mémoire insulaire, archéologie et christianisation dans Le Testament d’Azénor.">
+<meta name="description" content="Île d’Ouessant (Enez Eusa) — mémoire antique, archéologie et christianisation dans Le Testament d’Azénor.">
 <link rel="canonical" href="https://azenor.org/ouessant.html">
 
 <meta property="og:locale" content="fr_FR">
@@ -25,9 +25,11 @@
 
 /* ===== FOND GLOBAL ===== */
 html, body{
-  background:#5c5c5c;
   margin:0;
   padding:0;
+  background:#5c5c5c;
+  color:#ffffff;
+  font-family:'Inter', sans-serif;
 }
 
 /* ===== STRUCTURE ===== */
@@ -55,12 +57,9 @@ html, body{
 .lieu-content{
   max-width:900px;
   margin:3rem auto 4rem;
-  background:#ffffff;
-  padding:2.5rem;
-  border-radius:8px;
-  line-height:1.7;
+  padding:0 16px;
+  line-height:1.75;
   font-size:1.05rem;
-  color:#000;
 }
 
 .lieu-content h2{
@@ -69,16 +68,19 @@ html, body{
   margin-top:3rem;
   margin-bottom:1rem;
   font-size:1.6rem;
-  position:relative;
 }
 
-.lieu-content h2::after{
-  content:"";
-  display:block;
-  width:60px;
-  height:2px;
-  background:#f28c28;
-  margin-top:8px;
+.lieu-content p{
+  margin-bottom:1.2rem;
+}
+
+a{
+  color:#f28c28;
+  text-decoration:none;
+}
+
+a:hover{
+  text-decoration:underline;
 }
 
 /* ===== MOBILE ===== */
@@ -89,10 +91,49 @@ html, body{
   }
 
   .lieu-content{
-    padding:1.5rem;
     font-size:1rem;
   }
 
+}
+
+/* ===== FOOTER ===== */
+.site-footer{
+  background:#000;
+  padding:1.6rem 0;
+}
+
+.site-footer .footer-inner{
+  max-width:1200px;
+  margin:0 auto;
+  padding:0 1.5rem;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.footer-left{
+  display:flex;
+  align-items:center;
+  gap:1.2rem;
+}
+
+.like-btn{
+  background:none;
+  border:1px solid #f28c28;
+  color:#f28c28;
+  padding:0.35rem 0.7rem;
+  cursor:pointer;
+  font-size:0.9rem;
+}
+
+.footer-right .buy-btn{
+  background:linear-gradient(#3a3a3a, #1f1f1f);
+  color:#f28c28;
+  padding:0.55rem 1.2rem;
+  text-decoration:none;
+  font-weight:500;
+  border-radius:3px;
+  box-shadow:0 2px 4px rgba(0,0,0,0.6);
 }
 
 </style>
@@ -131,7 +172,7 @@ html, body{
 <h2>Un héritage insulaire ancien</h2>
 
 <p>
-Les “trois sorcières” ne surgissent pas du néant. Leur figure s’inscrit dans une mémoire plus ancienne, évoquée dès l’Antiquité par <strong>[Pomponius Mela](chatgpt://generic-entity?number=0)</strong>, qui mentionne l’île de Sena, habitée par neuf prêtresses capables de lever les tempêtes et de prédire l’avenir.
+Les “trois sorcières” ne surgissent pas du néant. Leur figure s’inscrit dans une mémoire plus ancienne, évoquée dès l’Antiquité par Pomponius Mela, qui mentionne l’île de Sena, habitée par neuf prêtresses capables de lever les tempêtes et de prédire l’avenir.
 </p>
 
 <p>
@@ -141,21 +182,21 @@ Si l’identification géographique demeure discutée, la tradition bretonne a s
 <h2>Archéologie du rivage : les berniques</h2>
 
 <p>
-Les fouilles archéologiques menées sur l’île ont mis au jour d’importants amas coquilliers constitués sur plusieurs siècles. Les accumulations de patelles — les berniques — témoignent d’une économie littorale structurée et d’une présence humaine durable.
+Les fouilles archéologiques ont mis au jour d’importants amas coquilliers constitués sur plusieurs siècles. Les accumulations de patelles — les berniques — témoignent d’une économie littorale structurée et d’une présence humaine durable.
 </p>
 
 <p>
-Ces dépôts sont de véritables archives du quotidien. Ils rappellent que la survie sur l’île reposait sur une connaissance précise des marées, des saisons et des ressources marines. Dans le roman, ces berniques deviennent matière symbolique : l’élément le plus humble du rivage se transforme en signe, voire en instrument de violence.
+Ces dépôts sont de véritables archives du quotidien. Ils rappellent que la survie sur l’île reposait sur une connaissance précise des marées et des ressources marines. Dans le roman, ces berniques deviennent matière symbolique : l’élément le plus humble du rivage se transforme en signe, voire en instrument de violence.
 </p>
 
 <h2>Le passage de Paol Aurélien</h2>
 
 <p>
-La tradition hagiographique rapporte que <strong>[Saint Pol Aurélien](chatgpt://generic-entity?number=1)</strong> aborda d’abord l’île avant de rejoindre le continent et de fonder le siège épiscopal du Léon.
+La tradition rapporte que Paol Aurélien aborda d’abord l’île avant de rejoindre le continent et de fonder le siège épiscopal du Léon.
 </p>
 
 <p>
-Ce détail souligne le rôle d’Enez Eusa comme seuil : lieu d’arrivée, de transition et peut-être de confrontation symbolique avant l’installation chrétienne durable.
+Enez Eusa apparaît ainsi comme un seuil : lieu d’arrivée, de transition et peut-être de confrontation symbolique avant l’installation chrétienne durable.
 </p>
 
 <h2>Résistance et mémoire</h2>
@@ -165,7 +206,7 @@ Rozenn, Maod et Berc’hed n’incarnent pas un druidisme intact. Elles figurent
 </p>
 
 <p>
-L’île devient ainsi un espace liminaire : frontière géographique, religieuse et symbolique, où se joue une tension entre continuité et effacement.
+L’île devient un espace liminaire — frontière géographique et spirituelle — où se joue une tension entre continuité et effacement.
 </p>
 
 </section>
