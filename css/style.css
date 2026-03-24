@@ -40,12 +40,24 @@ header.site-header{
     url('../images/accueil/fond-accueil.jpg') center/cover no-repeat;
 }
 .hero-content{max-width:var(--max);padding:3rem 1.5rem}
-.hero-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:3rem;align-items:center}
+.hero-grid{
+  display:grid;
+  grid-template-columns:1fr 1.2fr;
+  gap:3rem;
+  align-items:center;
+}
 @media (max-width: 900px){.hero-grid{grid-template-columns:1fr}}
 
 .cover{display:flex;justify-content:center}
-.cover img{max-width:290px;width:100%;height:auto;box-shadow:0 10px 30px rgba(0,0,0,.6)}
 
+.cover iframe{
+  width:420px;
+  max-width:100%;
+  aspect-ratio:1.5/1;
+  height:auto;
+  box-shadow:0 10px 30px rgba(0,0,0,.6);
+  border:0;
+}
 /* Buy banner */
 .buy-banner{
   position:fixed;left:0;right:0;bottom:0;z-index:1500;
