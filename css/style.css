@@ -48,13 +48,13 @@ header.site-header{
 }
 @media (max-width: 900px){.hero-grid{grid-template-columns:1fr}}
 
-.cover{display:flex;justify-content:center}
-
-.cover iframe{
+.cover{
   width:420px;
   max-width:100%;
   aspect-ratio:1.5/1;
   height:auto;
+  display:block;
+  margin:auto;
   box-shadow:0 10px 30px rgba(0,0,0,.6);
   border:0;
 }
