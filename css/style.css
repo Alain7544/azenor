@@ -373,3 +373,7 @@ footer .like-btn,
 .site-footer .like-btn{
   display: none !important;
 }
+body.home .hero-grid{
+  grid-template-columns: 380px minmax(0, 520px);
+  justify-content: center;
+}
