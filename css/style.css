@@ -373,7 +373,39 @@ footer .like-btn,
 .site-footer .like-btn{
   display: none !important;
 }
-body.home .hero{
-  grid-template-columns: 480px minmax(0, 560px);
+/* =========================================================
+   HOME — vidéo plus large / texte plus étroit
+   ========================================================= */
+body.home .hero-content{
+  max-width: 1220px;
+}
+
+body.home .hero-grid{
+  display: grid;
+  grid-template-columns: 560px minmax(0, 520px);
+  gap: 3rem;
   justify-content: center;
+  align-items: start;
+}
+
+body.home .cover{
+  width: 560px;
+  max-width: 100%;
+}
+
+body.home .hero-grid > :last-child{
+  max-width: 520px;
+  width: 100%;
+}
+
+@media (max-width: 900px){
+  body.home .hero-grid{
+    grid-template-columns: 1fr;
+  }
+
+  body.home .cover,
+  body.home .hero-grid > :last-child{
+    max-width: 100%;
+    width: 100%;
+  }
 }
