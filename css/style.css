@@ -409,3 +409,31 @@ body.home .hero-grid > :last-child{
     width: 100%;
   }
 }
+@media (max-width: 768px){
+  header.site-header .nav{
+    overflow: hidden;
+  }
+
+  header.site-header .nav-menu{
+    min-width: 0;
+    flex: 1 1 auto;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    -webkit-overflow-scrolling: touch;
+    justify-content: flex-start !important;
+    gap: .75rem;
+    padding-bottom: .2rem;
+    scrollbar-width: none;
+    touch-action: pan-x;
+  }
+
+  header.site-header .nav-menu::-webkit-scrollbar{
+    display: none;
+  }
+
+  header.site-header .nav-menu a{
+    flex: 0 0 auto;
+    white-space: nowrap !important;
+  }
+}
