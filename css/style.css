@@ -51,7 +51,7 @@ header.site-header{
 .cover{
   width:380px;
   max-width:100%;
-  aspect-ratio:1.5/1;
+  aspect-ratio:16/9;
   height:auto;
   display:block;
   margin:auto;
