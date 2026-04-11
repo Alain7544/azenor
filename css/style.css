@@ -444,7 +444,7 @@ body.home .hero-grid > :last-child{
 }
 .en .cover{
   width: 100%;
-  max-width: 480px;
+  max-width: 600px;
 }
 
 .en .cover iframe{
