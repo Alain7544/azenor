@@ -442,14 +442,7 @@ body.home .hero-grid > :last-child{
     position: static;
   }
 }
-<div class="cover cover-en">
-  <iframe
-    src="https://www.youtube.com/embed/ruMSb2vq0o8"
-    title="The Testament of Azénor – English trailer"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen>
-  </iframe>
-</div>
+
 /* === PAGE EN : vidéo plus large === */
 .en.home .hero-grid{
   grid-template-columns: 640px minmax(0, 520px);
@@ -458,4 +451,19 @@ body.home .hero-grid > :last-child{
 .en.home .cover{
   width: 640px;
   max-width: 100%;
+}
+/* === VIDEO PAGE EN === */
+.cover-video{
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.cover-video iframe{
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  display: block;
+  border: 0;
+  box-shadow: 0 10px 30px rgba(0,0,0,.6);
 }
