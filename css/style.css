@@ -442,15 +442,11 @@ body.home .hero-grid > :last-child{
     position: static;
   }
 }
-.en .cover{
-  width: 100%;
-  max-width: 600px;
-}
-
-.en .cover iframe{
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  height: auto;
-  border: 0;
-  display: block;
-}
+<div class="cover cover-en">
+  <iframe
+    src="https://www.youtube.com/embed/ruMSb2vq0o8"
+    title="The Testament of Azénor – English trailer"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen>
+  </iframe>
+</div>
