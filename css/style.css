@@ -49,9 +49,8 @@ header.site-header{
 @media (max-width: 900px){.hero-grid{grid-template-columns:1fr}}
 
 .cover{
-  width:380px;
-  max-width:100%;
-  aspect-ratio:16/9;
+  width:100%;
+  max-width:520px; /* ajuste ici */
   height:auto;
   display:block;
   margin:auto;
