@@ -31,8 +31,11 @@ html, body{
 }
 
 body.avislecteurs{
-  font-family:'Inter', sans-serif;
   color:#f2f2f2 !important;
+  font-family:'Inter', sans-serif;
+  background:
+    linear-gradient(rgba(0,0,0,0.50), rgba(0,0,0,0.50)),
+    url('manuscrit.jpeg') center / cover no-repeat fixed !important;
   padding-top:78px;
   padding-bottom:110px;
 }
@@ -66,6 +69,12 @@ body.avislecteurs a:hover{
   margin:0 auto;
   padding:40px 40px 60px;
   background:transparent !important;
+}
+
+.avislecteurs h2{
+  color:#f28c28 !important;
+  font-family:'Libre Baskerville', serif;
+  margin-top:2em;
 }
 
 .avislecteurs .intro-page{
@@ -117,7 +126,7 @@ body.avislecteurs a:hover{
   font-style:italic;
 }
 
-/* HEADER FIXE */
+/* header repris et verrouillé */
 .site-header{
   position:fixed;
   top:0;
@@ -198,15 +207,16 @@ body.avislecteurs a:hover{
   }
 }
 
-/* FOOTER FIXE */
+/* footer repris et verrouillé */
 .site-footer{
+  background:#000 !important;
+  margin-top:0 !important;
+  padding:1.6rem 0;
   position:fixed;
   left:0;
   right:0;
   bottom:0;
   z-index:9999;
-  background:#000 !important;
-  padding:1.6rem 0;
 }
 
 .site-footer .footer-inner{
@@ -264,7 +274,7 @@ main{
 </style>
 </head>
 
-<body class="avislecteurs" style="background: linear-gradient(rgba(0,0,0,0.58), rgba(0,0,0,0.58)), url('manuscrit.jpeg') center / cover no-repeat fixed;">
+<body class="avislecteurs">
 <header class="site-header">
 <nav class="nav">
 <div class="nav-title">
