@@ -475,3 +475,17 @@ body.home .hero-grid > :last-child{
   margin-top:18px;
   text-align:center;
 }
+/* ===== HEADER FIX DEFINITIF ===== */
+header,
+.site-header{
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+/* évite que le contenu passe sous le header */
+body{
+  padding-top: 80px;
+}
