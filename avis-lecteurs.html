@@ -30,12 +30,21 @@ html, body{
   min-height:100%;
 }
 
+/* fond parchemin fixe et uniforme */
+html,
+body.avislecteurs{
+  background-image:url('manuscrit.jpeg') !important;
+  background-position:center !important;
+  background-size:cover !important;
+  background-repeat:no-repeat !important;
+  background-attachment:fixed !important;
+  background-color:#000 !important;
+}
+
 body.avislecteurs{
   color:#f2f2f2 !important;
   font-family:'Inter', sans-serif;
-  background:
-    linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.85)),
-    url('manuscrit.jpeg') center / cover no-repeat fixed !important;
+  padding-bottom:110px;
 }
 
 body.avislecteurs,
@@ -87,6 +96,7 @@ body.avislecteurs a:hover{
   margin:2.2rem 0 2.6rem;
   padding-bottom:2rem;
   border-bottom:1px solid rgba(255,255,255,.12);
+  background:transparent !important;
 }
 
 .avislecteurs .avis-bloc:last-of-type{
@@ -204,6 +214,11 @@ body.avislecteurs a:hover{
 
 /* footer repris et verrouillé */
 .site-footer{
+  position:fixed;
+  left:0;
+  right:0;
+  bottom:0;
+  z-index:9999;
   background:#000 !important;
   margin-top:0 !important;
   padding:1.6rem 0;
@@ -261,42 +276,10 @@ main{
   margin-bottom:0 !important;
   padding-bottom:0 !important;
 }
-
-body.avislecteurs{
-  padding-bottom: 110px;
-}
-
-/* footer fixe comme sur l'index */
-.site-footer{
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 9999;
-}
-<style>
-.avislecteurs main{
-  background: transparent !important;
-}
-  /* ===== FIX PARCHEMIN UNIFORME ===== */
-
-html,
-body.avislecteurs{
-  background:
-    rgba(0,0,0,0.75),
-    url('manuscrit.jpeg') center / cover no-repeat fixed !important;
-}
-
-body.avislecteurs main,
-body.avislecteurs .hero,
-body.avislecteurs .avis-bloc{
-  background: transparent !important;
-}
-</style>
 </style>
 </head>
 
-<body class="avislecteurs" style="background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.85)), url('manuscrit.jpeg') center / cover no-repeat fixed;">
+<body class="avislecteurs">
 <header class="site-header">
 <nav class="nav">
 <div class="nav-title">
@@ -309,7 +292,6 @@ body.avislecteurs .avis-bloc{
 <a href="veritable-legende-azenor.html">la légende<span>d’azénor</span></a>
 <a href="bibliographie.html">bibliographie</a>
 <a href="making-off.html">making of</a>
-
 <a href="contact.html">contact</a>
 </div>
 </nav>
@@ -407,7 +389,7 @@ Cette page sera enrichie au fil des retours de lecteurs.
 <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M18.24 2H21l-6.6 7.55L22 22h-6.6l-4.7-6.1L5.4 22H2.6l7.1-8.1L2 2h6.7l4.3 5.6L18.24 2z"></path></svg>
 </a>
 <a class="icon" href="https://www.facebook.com/sharer/sharer.php?u=https://azenor.org/avis-lecteurs.html" rel="noopener" target="_blank" title="Facebook">
-<svg aria-hidden="true" viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9v-2.9h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.8-1.6 1.5v1.8h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z"></path></svg>
+<svg aria-hidden="true" viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9v-2.9h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6 1.5v1.8h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z"></path></svg>
 </a>
 </div>
 </div>
