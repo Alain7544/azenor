@@ -466,11 +466,8 @@ body.home .hero-grid > :last-child{
   border: 0;
   box-shadow: 0 10px 30px rgba(0,0,0,.6);
 }
-.hero > div:first-child{
-  width:520px !important;
-}
-
 .cover{
   width:100% !important;
-  max-width:520px !important;
+  max-width:560px !important;
+  height:auto !important;
 }
