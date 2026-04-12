@@ -16,7 +16,7 @@
 <meta name="twitter:title" content="ce qu’en pensent les lecteurs — Le Testament d’Azénor">
 <meta name="twitter:description" content="Retours critiques, avis Amazon et impressions de lecture sur Le Testament d’Azénor, roman historique breton du VIe siècle.">
 
-<title>Ce qu’en pensent les lecteurs — Le Testament d’Azénor</title>
+<title>ce qu’en pensent les lecteurs — Le Testament d’Azénor</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
@@ -30,20 +30,10 @@ html, body{
   min-height:100%;
 }
 
-/* fond parchemin fixe et uniforme */
-html,
 body.avislecteurs{
-  background-image:url('manuscrit.jpeg') !important;
-  background-position:center !important;
-  background-size:cover !important;
-  background-repeat:no-repeat !important;
-  background-attachment:fixed !important;
-  background-color:#000 !important;
-}
-
-body.avislecteurs{
-  color:#f2f2f2 !important;
   font-family:'Inter', sans-serif;
+  color:#f2f2f2 !important;
+  padding-top:78px;
   padding-bottom:110px;
 }
 
@@ -75,13 +65,7 @@ body.avislecteurs a:hover{
   max-width:900px;
   margin:0 auto;
   padding:40px 40px 60px;
-background:rgba(0,0,0,.55) !important;
-}
-
-.avislecteurs h2{
-  color:#f28c28 !important;
-  font-family:'Libre Baskerville', serif;
-  margin-top:2em;
+  background:transparent !important;
 }
 
 .avislecteurs .intro-page{
@@ -133,10 +117,12 @@ background:rgba(0,0,0,.55) !important;
   font-style:italic;
 }
 
-/* header repris et verrouillé */
+/* HEADER FIXE */
 .site-header{
-  position:sticky;
+  position:fixed;
   top:0;
+  left:0;
+  right:0;
   z-index:2000;
   background:rgba(0,0,0,.65) !important;
   backdrop-filter:blur(8px);
@@ -212,7 +198,7 @@ background:rgba(0,0,0,.55) !important;
   }
 }
 
-/* footer repris et verrouillé */
+/* FOOTER FIXE */
 .site-footer{
   position:fixed;
   left:0;
@@ -220,7 +206,6 @@ background:rgba(0,0,0,.55) !important;
   bottom:0;
   z-index:9999;
   background:#000 !important;
-  margin-top:0 !important;
   padding:1.6rem 0;
 }
 
@@ -279,7 +264,7 @@ main{
 </style>
 </head>
 
-<body class="avislecteurs" style="background: url('manuscrit.jpeg') center / cover no-repeat fixed;">
+<body class="avislecteurs" style="background: linear-gradient(rgba(0,0,0,0.58), rgba(0,0,0,0.58)), url('manuscrit.jpeg') center / cover no-repeat fixed;">
 <header class="site-header">
 <nav class="nav">
 <div class="nav-title">
