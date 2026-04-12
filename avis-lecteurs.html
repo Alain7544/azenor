@@ -271,6 +271,29 @@ main{
   margin-bottom:0 !important;
   padding-bottom:0 !important;
 }
+  /* ===== FIX FINAL DEFINITIF ===== */
+
+/* fond parchemin lisible partout */
+body.avislecteurs{
+  background:
+    linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+    url('manuscrit.jpeg') center / cover no-repeat fixed !important;
+  padding-top: 78px !important;
+}
+
+/* header TOUJOURS visible */
+.site-header{
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  z-index: 99999 !important;
+}
+
+/* on neutralise les conflits */
+html, body{
+  background: none !important;
+}
 </style>
 </head>
 
