@@ -36,7 +36,7 @@ body.avislecteurs{
   background:
     linear-gradient(rgba(0,0,0,0.50), rgba(0,0,0,0.50)),
     url('manuscrit.jpeg') center / cover no-repeat fixed !important;
-  padding-top:78px;
+  padding-top:0;
   padding-bottom:110px;
 }
 
@@ -271,28 +271,27 @@ main{
   margin-bottom:0 !important;
   padding-bottom:0 !important;
 }
-  /* ===== FIX FINAL DEFINITIF ===== */
 
-/* fond parchemin lisible partout */
-body.avislecteurs{
-  background:
-    linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
-    url('manuscrit.jpeg') center / cover no-repeat fixed !important;
-  padding-top: 78px !important;
-}
-
-/* header TOUJOURS visible */
-.site-header{
-  position: fixed !important;
-  top: 0 !important;
-  left: 0 !important;
-  right: 0 !important;
-  z-index: 99999 !important;
-}
 
 /* on neutralise les conflits */
 html, body{
   background: none !important;
+}
+  /* ===== FIX HEADER PROPRE ===== */
+
+header.site-header,
+.site-header{
+  position:fixed !important;
+  top:0 !important;
+  left:0 !important;
+  right:0 !important;
+  width:100% !important;
+  z-index:99999 !important;
+  margin:0 !important;
+}
+
+body.avislecteurs main{
+  padding-top:110px !important;
 }
 </style>
 </head>
