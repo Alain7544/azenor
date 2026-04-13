@@ -386,6 +386,32 @@ main{
     padding:105px 20px 2rem !important;
   }
 }
+    <style>
+/* ===== CORRECTION BANDE GRISE EN BAS ===== */
+
+main,
+main p,
+main h1,
+main h2,
+main h3,
+main div,
+main section,
+main article{
+  background:transparent !important;
+}
+
+/* évite qu’un dernier bloc garde un fond ou une marge bizarre */
+main > *:last-child{
+  margin-bottom:0 !important;
+  padding-bottom:0 !important;
+  background:transparent !important;
+}
+
+/* un peu d’air en bas, sans bande parasite */
+body{
+  padding-bottom:140px !important;
+}
+</style>
 </style>
 </head>
 <body class="makingoff" style="background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.85)), url('manuscrit.jpeg') center / cover no-repeat fixed;">
