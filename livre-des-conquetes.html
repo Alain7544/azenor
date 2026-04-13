@@ -28,14 +28,20 @@ html, body{
   min-height:100%;
 }
 
+html, body{
+  margin:0;
+  padding:0;
+  min-height:100%;
+  background:transparent !important;
+}
+
 body{
   background:
-    linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
-    url("manuscrit.jpeg") center / cover no-repeat fixed;
+    linear-gradient(rgba(0,0,0,0.50), rgba(0,0,0,0.50)),
+    url("manuscrit.jpeg") center / cover no-repeat fixed !important;
   color:#f2f2f2;
   padding-bottom:0;
 }
-
 header.site-header,
 .site-header{
   position:fixed !important;
@@ -100,9 +106,9 @@ main{
   max-width:900px;
   margin:0 auto;
   padding:110px 2.8rem 2.8rem;
-  background:rgba(0,0,0,0.45);
-  backdrop-filter:blur(2px);
-  -webkit-backdrop-filter:blur(2px);
+  background:transparent !important;
+  backdrop-filter:none !important;
+  -webkit-backdrop-filter:none !important;
 }
 
 h1{
