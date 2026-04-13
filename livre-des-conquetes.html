@@ -22,51 +22,146 @@
 <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400&700&amp&family=Inter:wght@300&400&500&amp&display=swap" rel="stylesheet"/>
 <link href="css/style.css?v=20260115" rel="stylesheet"/>
 <style>
-html {
+html, body{
+  margin:0;
+  padding:0;
+  min-height:100%;
+}
+
+body{
   background:
-    linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.65)),
+    linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
     url("manuscrit.jpeg") center / cover no-repeat fixed;
+  color:#f2f2f2;
+  padding-bottom:0;
 }
 
-body {
-  margin: 0;
-  background: transparent;
-  color: #f2f2f2;
+header.site-header,
+.site-header{
+  position:fixed !important;
+  top:0 !important;
+  left:0 !important;
+  right:0 !important;
+  width:100% !important;
+  z-index:99999 !important;
+  margin:0 !important;
+  transform:none !important;
+  background:rgba(0,0,0,.65) !important;
+  backdrop-filter:blur(8px);
+  -webkit-backdrop-filter:blur(8px);
+  border-bottom:1px solid rgba(255,255,255,.15);
 }
 
-main {
-  max-width: 900px;
-  margin: 3rem auto;
-  padding: 2.8rem;
-  background: rgba(0,0,0,0.45);
-  backdrop-filter: blur(2px);
+.site-header .nav{
+  max-width:1200px;
+  margin:0 auto;
+  padding:.9rem 1.5rem;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:1rem;
 }
 
-h1 {
-  text-align: center;
-  color: #f28c28;
-  font-family: 'Libre Baskerville', serif;
-  margin-bottom: 2rem;
+.site-header .nav-title a{
+  color:#f28c28 !important;
+  text-decoration:none !important;
+  font-family:'Libre Baskerville', serif;
 }
 
-h2 {
-  color: #f28c28;
-  font-family: 'Libre Baskerville', serif;
-  margin-top: 2.5rem;
+.site-header .nav-menu{
+  display:flex;
+  flex-wrap:wrap;
+  gap:1rem;
+  justify-content:flex-end;
 }
 
-p {
-  line-height: 1.7;
-  margin-bottom: 1.2rem;
+.site-header .nav-menu a{
+  color:#f28c28 !important;
+  background:rgba(200,200,200,.14);
+  border:1px solid rgba(242,140,40,.35);
+  padding:.35em .8em;
+  border-radius:6px;
+  text-decoration:none !important;
+  line-height:1.2;
+  font-weight:700;
+  text-align:center;
 }
 
-.section-intro {
-  text-align: center;
-  max-width: 720px;
-  margin: 0 auto 3rem;
-  color: #e0e0e0;
-  font-style: italic;
+.site-header .nav-menu a span{
+  display:block;
 }
+
+.site-header .nav-menu a:hover{
+  background:rgba(200,200,200,.24);
+  border-color:rgba(242,140,40,.75);
+}
+
+main{
+  max-width:900px;
+  margin:0 auto;
+  padding:110px 2.8rem 2.8rem;
+  background:rgba(0,0,0,0.45);
+  backdrop-filter:blur(2px);
+  -webkit-backdrop-filter:blur(2px);
+}
+
+h1{
+  text-align:center;
+  color:#f28c28;
+  font-family:'Libre Baskerville', serif;
+  margin-bottom:2rem;
+}
+
+h2{
+  color:#f28c28;
+  font-family:'Libre Baskerville', serif;
+  margin-top:2.5rem;
+}
+
+p{
+  line-height:1.7;
+  margin-bottom:1.2rem;
+}
+
+.section-intro{
+  text-align:center;
+  max-width:720px;
+  margin:0 auto 3rem;
+  color:#e0e0e0;
+  font-style:italic;
+}
+
+@media (max-width:768px){
+  .site-header .nav{
+    overflow:hidden;
+  }
+
+  .site-header .nav-menu{
+    min-width:0;
+    flex:1 1 auto;
+    flex-wrap:nowrap;
+    overflow-x:auto;
+    overflow-y:hidden;
+    -webkit-overflow-scrolling:touch;
+    justify-content:flex-start;
+    gap:.75rem;
+    scrollbar-width:none;
+  }
+
+  .site-header .nav-menu::-webkit-scrollbar{
+    display:none;
+  }
+
+  .site-header .nav-menu a{
+    flex:0 0 auto;
+    white-space:nowrap;
+  }
+
+  main{
+    padding:105px 20px 2rem;
+  }
+}
+  
 </style>
 <style>
 /* ===== FOOTER AMÉLIORÉ ===== */
@@ -190,14 +285,13 @@ p {
 }
 </style>
 <style>
-/* --- CORRECTION : IMAGE DE FOND JUSQU'AU FOOTER --- */
+/* --- CORRECTION FOND / FOOTER --- */
 main{
-  margin-bottom: 0 !important;
-  padding-bottom: 0 !important;
+  margin-bottom:0 !important;
 }
 
 .site-footer{
-  margin-top: 0 !important;
+  margin-top:0 !important;
 }
 </style>
 <style>
