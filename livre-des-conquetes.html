@@ -475,6 +475,86 @@ main{
   margin-top: 0 !important;
 }
 </style>
+  <style>
+/* ===== OVERRIDE FINAL PROPRE : livre-des-conquetes ===== */
+
+/* 1) on neutralise tous les fonds parasites */
+html,
+body,
+main,
+.site-page,
+.page,
+.page-content,
+.content,
+.wrapper,
+.container{
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+/* 2) le seul vrai fond de la page */
+html{
+  margin:0 !important;
+  padding:0 !important;
+  min-height:100% !important;
+  background:
+    linear-gradient(rgba(0,0,0,0.58), rgba(0,0,0,0.58)),
+    url("manuscrit.jpeg") center top / cover no-repeat fixed !important;
+}
+
+body{
+  margin:0 !important;
+  padding:0 0 110px 0 !important;
+  min-height:100% !important;
+  background: transparent !important;
+  color:#f2f2f2 !important;
+  font-family:'Inter', sans-serif !important;
+}
+
+/* 3) header fixé */
+header.site-header,
+.site-header{
+  position:fixed !important;
+  top:0 !important;
+  left:0 !important;
+  right:0 !important;
+  width:100% !important;
+  z-index:99999 !important;
+  margin:0 !important;
+  background:rgba(0,0,0,.65) !important;
+  backdrop-filter:blur(8px) !important;
+  -webkit-backdrop-filter:blur(8px) !important;
+  border-bottom:1px solid rgba(255,255,255,.15) !important;
+}
+
+/* 4) contenu transparent */
+main{
+  max-width:900px !important;
+  margin:0 auto !important;
+  padding:110px 2.8rem 2.8rem !important;
+  background:transparent !important;
+  backdrop-filter:none !important;
+  -webkit-backdrop-filter:none !important;
+}
+
+/* 5) footer fixé */
+.site-footer{
+  position:fixed !important;
+  left:0 !important;
+  right:0 !important;
+  bottom:0 !important;
+  z-index:9999 !important;
+  margin-top:0 !important;
+  background:#000 !important;
+}
+
+/* 6) sécurité mobile */
+@media (max-width:768px){
+  main{
+    padding:105px 20px 2rem !important;
+  }
+}
+</style>
 </head>
 <body>
 <header class="site-header">
