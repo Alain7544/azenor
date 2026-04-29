@@ -160,13 +160,11 @@ a:hover{
 
 /* ===== GALERIE PHOTOS (empilées) ===== */
 .photo-gallery{
-  max-width:1200px;   /* même largeur que .lieu-wrapper (la carte) */
-  margin:1.5rem auto 0;
+  margin-top:1.5rem;
 }
 
 .photo-gallery figure{
-  margin:0 0 1.5rem 0;
-  text-align:center;
+  margin:0 0 1.8rem 0;
 }
 
 .photo-gallery img{
@@ -176,6 +174,7 @@ a:hover{
 }
 
 .photo-gallery figcaption{
+  text-align:center;
   font-size:0.9rem;
   color:#ccc;
   margin-top:0.5rem;
@@ -213,27 +212,28 @@ a:hover{
 <main>
 
 <div class="lieu-wrapper">
-<h1 class="lieu-title">Île d’Ouessant (Enez Eusa)</h1>
-<div class="map-full">
-<img src="images/cartes/ouessant.jpg" alt="Carte de l’île d’Ouessant">
-</div>
+  <h1 class="lieu-title">Île d’Ouessant (Enez Eusa)</h1>
+
+  <div class="map-full">
+    <img src="images/cartes/ouessant.jpg" alt="Carte de l’île d’Ouessant">
+  </div>
+
   <div class="photo-gallery">
+    <figure>
+      <img src="images/accueil/arlan1.jpg" alt="Plage de Porz Ar Lan">
+      <figcaption>La plage de Porz Ar Lan où débarque Azénor.</figcaption>
+    </figure>
 
-  <figure>
-    <img src="images/accueil/arlan1.jpg" alt="Plage de Porz Ar Lan">
-    <figcaption>La plage de Porz Ar Lan où débarque Azénor.</figcaption>
-  </figure>
+    <figure>
+      <img src="images/accueil/arlan2.jpg" alt="Porz Ar Lan vu de la mer">
+      <figcaption>Les deux grèves de Porz Ar Lan vues de la mer.</figcaption>
+    </figure>
 
-  <figure>
-    <img src="images/accueil/arlan2.jpg" alt="Porz Ar Lan vu de la mer">
-    <figcaption>Les deux grèves de Porz Ar Lan vues de la mer.</figcaption>
-  </figure>
-
-  <figure>
-    <img src="images/accueil/pol.jpg" alt="Croix de Saint Pol Aurélien">
-    <figcaption>La croix de Saint Pol Aurélien à Penn Ar Lan, édifiée au XVIIIe siècle.</figcaption>
-  </figure>
-
+    <figure>
+      <img src="images/accueil/pol.jpg" alt="Croix de Saint Pol Aurélien">
+      <figcaption>La croix de Saint Pol Aurélien à Penn Ar Lan, édifiée au XVIIIe siècle.</figcaption>
+    </figure>
+  </div>
 </div>
 </div>
 
