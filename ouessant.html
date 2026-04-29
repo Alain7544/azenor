@@ -155,32 +155,33 @@ a:hover{
 
 .lien-sorcieres:hover{
   text-decoration:underline;
-
+}
+/* ===== GALERIE PHOTOS ===== */
+.photo-gallery{
+  display:flex;
+  gap:12px;
+  margin:1.2rem auto 0;
+  max-width:900px;
 }
 
-/* ===== GALERIE PHOTOS (empilées) ===== */
 .photo-gallery figure{
-  margin:0 0 2rem 0 !important;
-  padding:10px !important;
-  background:#4f4f4f !important;
-  border:1px solid rgba(255,255,255,0.18) !important;
+  flex:1;
+  margin:0;
 }
 
 .photo-gallery img{
-  width:100% !important;
-  height:auto !important;
-  display:block !important;
+  width:100%;
+  height:auto;
+  display:block;
 }
 
 .photo-gallery figcaption{
-  text-align:center !important;
-  font-size:0.88rem !important;
-  color:#d0d0d0 !important;
-  font-style:italic !important;
-  margin-top:0.65rem !important;
-  line-height:1.45 !important;
+  font-size:0.85rem;
+  color:#ccc;
+  margin-top:0.4rem;
+  line-height:1.4;
 }
-}
+
 /* Mobile */
 @media screen and (max-width:768px){
   .photo-gallery{
@@ -212,28 +213,27 @@ a:hover{
 <main>
 
 <div class="lieu-wrapper">
-  <h1 class="lieu-title">Île d’Ouessant (Enez Eusa)</h1>
-
-  <div class="map-full">
-    <img src="images/cartes/ouessant.jpg" alt="Carte de l’île d’Ouessant">
-  </div>
-
+<h1 class="lieu-title">Île d’Ouessant (Enez Eusa)</h1>
+<div class="map-full">
+<img src="images/cartes/ouessant.jpg" alt="Carte de l’île d’Ouessant">
+</div>
   <div class="photo-gallery">
-    <figure>
-      <img src="images/accueil/arlan1.jpg" alt="Plage de Porz Ar Lan">
-      <figcaption>La plage de Porz Ar Lan où débarque Azénor.</figcaption>
-    </figure>
 
-    <figure>
-      <img src="images/accueil/arlan2.jpg" alt="Porz Ar Lan vu de la mer">
-      <figcaption>Les deux grèves de Porz Ar Lan vues de la mer.</figcaption>
-    </figure>
+  <figure>
+    <img src="images/accueil/arlan1.jpg" alt="Plage de Porz Ar Lan">
+    <figcaption>La plage de Porz Ar Lan où débarque Azénor.</figcaption>
+  </figure>
 
-    <figure>
-      <img src="images/accueil/pol.jpg" alt="Croix de Saint Pol Aurélien">
-      <figcaption>La croix de Saint Pol Aurélien à Penn Ar Lan, édifiée au XVIIIe siècle.</figcaption>
-    </figure>
-  </div>
+  <figure>
+    <img src="images/accueil/arlan2.jpg" alt="Porz Ar Lan vu de la mer">
+    <figcaption>Les deux grèves de Porz Ar Lan vues de la mer.</figcaption>
+  </figure>
+
+  <figure>
+    <img src="images/accueil/pol.jpg" alt="Croix de Saint Pol Aurélien">
+    <figcaption>La croix de Saint Pol Aurélien à Penn Ar Lan, édifiée au XVIIIe siècle.</figcaption>
+  </figure>
+
 </div>
 </div>
 
