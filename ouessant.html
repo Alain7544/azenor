@@ -156,7 +156,37 @@ a:hover{
 .lien-sorcieres:hover{
   text-decoration:underline;
 }
+/* ===== GALERIE PHOTOS ===== */
+.photo-gallery{
+  display:flex;
+  gap:12px;
+  margin-top:1.2rem;
+}
 
+.photo-gallery figure{
+  flex:1;
+  margin:0;
+}
+
+.photo-gallery img{
+  width:100%;
+  height:auto;
+  display:block;
+}
+
+.photo-gallery figcaption{
+  font-size:0.85rem;
+  color:#ccc;
+  margin-top:0.4rem;
+  line-height:1.4;
+}
+
+/* Mobile */
+@media screen and (max-width:768px){
+  .photo-gallery{
+    flex-direction:column;
+  }
+}
 </style>
 </head>
 
